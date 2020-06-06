@@ -1,0 +1,388 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Apr 19, 2020, 6:59:28 PM
+    Author     : danie
+*/
+
+/*
+#header {
+    color: blueviolet;
+    float: right;
+    padding: 0px 20px 10px 10px;
+    
+}
+
+#header a {
+   padding: 10px 10px 10px 0;
+}
+.body-center {
+    margin: 0 auto;;
+    text-align: center;
+}
+
+
+.nav {
+    max-height: 10px;
+}
+
+.nav a {
+  float: right;
+  color: #f2f2f2;
+  text-align: center;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul a {
+    padding: 20px 16px;
+}
+
+.logo {
+  float: left;
+  margin: 5px;
+  padding: 0;
+}
+
+
+*/
+.state {
+    text-align: right;
+    padding: 0 10px 0 0;
+    color: #9749BF;
+    font-weight: bold;
+    font-size: 17px;
+    margin: 0;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-wrapper {
+    clear: both;
+    overflow: auto;
+}
+
+.logo {
+    float: left;
+    padding: 5px 0 0 10px;
+    margin: 0;
+}
+
+.nav {
+    float: right;
+    padding: 10px 10px 0 0;
+
+}
+
+li a {
+    text-decoration: none;
+    font-size: 17px;
+    color: #36328E;
+    font-weight: bold;
+}
+
+ul li{
+    display: inline-block; 
+    margin:10px;
+    font-size:20px;
+}
+
+.login-btn {
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: #3954d9;
+    padding: 5px 20px 5px 20px;
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    font-size: 20px;
+}
+
+welcome-copy a {
+    text-decoration: none; 
+}
+
+.register-btn {
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: #3954d9;
+    padding: 5px 20px 5px 20px;
+    display: inline-block;
+    text-decoration: none; 
+    font-size: 20px;
+
+}
+.link {
+    text-decoration: none; 
+    color: white;
+}
+
+.center {
+    text-align: center;
+}
+
+
+.welcome-copy {
+    padding: 20px;
+    float: right;
+    display: inline-block;
+    text-align: left;
+}
+
+.welcome-h1 {
+    font-family: 'Montserrat';
+    font-weight: bold;
+    font-size: 60px;
+    color: #36328E;
+    margin-bottom: 0;
+
+}
+.welcome-tagline {
+    color: #708090; 
+    margin-top: 0;
+    font-weight: normal;
+    text-align: center;
+}
+
+.welcome-wrapper {
+    clear: both;
+    overflow: auto; 
+    padding-top: 80px;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+
+.hero-img {
+    float: left;
+}
+/*background-image: url('../images/04.jpg');
+ background-image: linear-gradient(180deg, #fefdfb, #dfd5c9);
+*/
+body {
+    background-image: linear-gradient(180deg, #fefdfb, #dfd5c9);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'Open Sans';
+}
+
+body a {
+    font-family: 'Open Sans'; 
+}
+
+
+.form-wrapper {
+    background-color: white;
+    margin: 0 auto;
+    text-align: center;
+    max-width: 30%;
+    margin-top: 10%;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+table {
+    margin: 0 auto;
+    text-align: left;
+}
+
+.cells {
+    width: 170px;
+    border-radius: 3px;
+    padding-left: 5px;
+    border: solid 1px #708090;
+}
+
+.label {
+    text-align: right;
+    padding-right: 5px;
+}
+.TOS {
+    text-align: left;
+}
+
+.submit {
+    background-color: #3954d9;
+    color: white;
+    padding: 5px 10px 5px 10px;
+    font-family: 'Open Sans'; 
+    font-size: 20px;
+    border: none;
+    width: 200px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-buttons a {
+    padding-right: 10px;
+    color: black;
+    text-decoration: none;
+}
+
+.search {
+    max-width: 100%;
+    border-radius: 5px;
+    text-align: center;
+    margin: 0;
+
+
+}
+
+
+#searchbar {
+    width: 800px;
+    height: 30px;
+    padding-left: 10px;
+    border-radius: 5px;
+    border: solid 1px #708090;
+    margin-right: 5px;
+    margin: 0 auto;
+
+
+}
+
+.catalog-heading{
+    font-family: 'Montserrat';
+    font-weight: bold;
+    font-size: 60px;
+    margin: 0 auto;
+    text-align: center;
+    color: #36328E;
+}
+
+
+
+.search-btn {
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: #3954d9;
+    padding: 5px 20px 5px 20px;
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    margin-left: 3px;
+}
+
+.products-wrapper {
+    background-color: white;
+    margin: 50px 24px 24px 24px;
+    border-radius: 5px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Clear floats after the columns */
+.product-wrapper:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.product {
+    margin: 0;
+    text-align: center;
+    float: left;
+    width: 23%;
+    background-color: white;
+    margin: 10px;
+
+}
+
+.product-copy a {
+    font-family: 'Open Sans'; 
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration: none;
+    color: #220e3f;
+}
+
+.product-copy {
+    font-family: 'Open Sans'; 
+    font-weight: normal;
+    font-size: 12px;
+}
+
+.form-heading {
+    font-family: 'Montserrat';
+    font-weight: bold;
+    font-size: 40px; 
+    color: #36328E;
+}
+
+.update-success {
+    color: green;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.price {
+    font-weight: bold;
+    color: green;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+@media screen and (max-width: 1550px) {
+
+    .welcome-wrapper {
+        padding: 0;    
+    }  
+    .welcome-copy {
+        float: none;
+        width: 100%;
+    }
+    .welcome-h1 {
+        text-align: center;
+        padding: 0;
+    }
+    .hero-img   {
+        float: none;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+}
+
+@media screen and (max-width: 1270px) {
+    .product {
+        float: none;
+        width: 100%;
+        margin-top: 30px;
+    }   
+}
+
+@media screen and (max-width: 1060px) {
+    .form-wrapper {
+        max-width: 50%;
+    }
+
+}
+
+@media screen and (max-width: 1020px) {
+    .product {
+        float: none;
+        width: 100%;
+    }   
+}
