@@ -6,88 +6,56 @@
         <load-on-startup>0</load-on-startup>
     </servlet>
     <servlet>
-        <servlet-name>LoginServlet_Customer</servlet-name>
-        <servlet-class>controller.LoginServlet_Customer</servlet-class>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>controller.LoginServlet</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>RegisterServlet_Customer</servlet-name>
-        <servlet-class>controller.RegisterServlet_Customer</servlet-class>
+        <servlet-name>FindShipmentServelt</servlet-name>
+        <servlet-class>controller.FindShipmentServelt</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>LoginServlet_Staff</servlet-name>
-        <servlet-class>controller.LoginServlet_Staff</servlet-class>
+        <servlet-name>AddShipmentServlet</servlet-name>
+        <servlet-class>controller.AddShipmentServlet</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>EditServlet_Customer</servlet-name>
-        <servlet-class>controller.EditServlet_Customer</servlet-class>
+        <servlet-name>findOrdersServlet</servlet-name>
+        <servlet-class>controller.findOrdersServlet</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>EditServlet_Staff</servlet-name>
-        <servlet-class>controller.EditServlet_Staff</servlet-class>
+        <servlet-name>FindOrdersServlet</servlet-name>
+        <servlet-class>controller.FindOrdersServlet</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>RegisterServlet_Staff</servlet-name>
-        <servlet-class>controller.RegisterServlet_Staff</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>DeleteServlet_Customer</servlet-name>
-        <servlet-class>controller.DeleteServlet_Customer</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>DeleteServlet_Staff</servlet-name>
-        <servlet-class>controller.DeleteServlet_Staff</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>LoginTimeServlet_Customer</servlet-name>
-        <servlet-class>controller.LoginTimeServlet_Customer</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>LogoutServlet_Customer</servlet-name>
-        <servlet-class>controller.LogoutServlet_Customer</servlet-class>
+        <servlet-name>AddToCartServlet</servlet-name>
+        <servlet-class>controller.AddToCartServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>ConnServlet</servlet-name>
         <url-pattern>/ConnServlet</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>LoginServlet_Customer</servlet-name>
-        <url-pattern>/LoginServlet_Customer</url-pattern>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/LoginServlet</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>RegisterServlet_Customer</servlet-name>
-        <url-pattern>/RegisterServlet_Customer</url-pattern>
+        <servlet-name>FindShipmentServelt</servlet-name>
+        <url-pattern>/FindShipmentServelt</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>LoginServlet_Staff</servlet-name>
-        <url-pattern>/LoginServlet_Staff</url-pattern>
+        <servlet-name>AddShipmentServlet</servlet-name>
+        <url-pattern>/AddShipmentServlet</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>EditServlet_Customer</servlet-name>
-        <url-pattern>/EditServlet_Customer</url-pattern>
+        <servlet-name>findOrdersServlet</servlet-name>
+        <url-pattern>/findOrdersServlet</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>EditServlet_Staff</servlet-name>
-        <url-pattern>/EditServlet_Staff</url-pattern>
+        <servlet-name>FindOrdersServlet</servlet-name>
+        <url-pattern>/FindOrdersServlet</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>RegisterServlet_Staff</servlet-name>
-        <url-pattern>/RegisterServlet_Staff</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>DeleteServlet_Customer</servlet-name>
-        <url-pattern>/DeleteServlet_Customer</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>DeleteServlet_Staff</servlet-name>
-        <url-pattern>/DeleteServlet_Staff</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>LoginTimeServlet_Customer</servlet-name>
-        <url-pattern>/LoginTimeServlet_Customer</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>LogoutServlet_Customer</servlet-name>
-        <url-pattern>/LogoutServlet_Customer</url-pattern>
+        <servlet-name>AddToCartServlet</servlet-name>
+        <url-pattern>/AddToCartServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

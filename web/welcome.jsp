@@ -1,58 +1,42 @@
 <%-- 
     Document   : welcome
     Created on : 08/04/2020, 4:20:45 PM
-    Author     : Hazel
+    Author     : bert_
 --%>
 
-<%@page import="java.util.Date"%>
-<%@page import="java.text.SimpleDateFormat"%>
-<%@page import="model.Customer"%>
-<%@page import="model.dao.DBManager"%>
+<%@page import="model.User"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" href="css/style.css"/>
-        <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
-        <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
         <title>Welcome Page</title>
     </head>
         <%
-            Customer customer = (Customer)session.getAttribute("customer");
-            //String tos = request.getParameter("tos");
-            DBManager manager = (DBManager)session.getAttribute("manager"); 
-            String email = request.getParameter("email");
-            String password = request.getParameter("password");
-            Date date = new Date();
-            SimpleDateFormat formatter=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-            
-           // String time = request.getParameter("time");
-            String timeStamp=formatter.format(date);
-            
-            if (customer != null) {
-                manager.addAccessLog("Login", timeStamp, email,"customer");
-            }    
+            User user = (User)session.getAttribute("user");
+            String tos = request.getParameter("tos");
         %>
     <style>
     </style>
     <body>
-        <%if (customer!=null){
-        %>
-       
-        <h1>Welcome, ${customer.name}!</h1>
-        <p>Your Email is ${customer.email} </p>
-        <p>Your Password is ${customer.password} </p>
-       <% }else { %>
-       
-         <h1>Welcome, Anonymous Customer!</h1>
-         <%}%>
+        
+        <% if(tos!=null){ %>
+        <h1>Welcome, ${user.name}!</h1>
+        <p>Your Email is ${user.email} </p>
+        <p>Your Password is ${user.password} </p>
+        <p>Your gender is ${user.gender} </p>
+        <p>Your favourite colour is ${user.favcol} </p>
+        <p>Click <a href ="pastshipments.jsp">Here</a> for past shipments
+        <% }else{ %>
+        <p>Sorry, you must agree to the Terms of Service.</p>
+        <p>Click <a href="register.jsp"> here</a> to go back.</p>
+        <% } %>
         <div>
             <a href ="index.jsp">Cancel</a>
             <a href ="main.jsp">Main</a>
         </div>
         <%
-            session.setAttribute("customer", customer);
+            session.setAttribute("user", user);
         %>
     </body>
 </html>

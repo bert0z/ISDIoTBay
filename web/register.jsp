@@ -1,28 +1,26 @@
 <%-- 
-    Document   : edit
-    Created on : 29/04/2020, 5:41:21 PM
+    Document   : register
+    Created on : 08/04/2020, 4:13:04 PM
     Author     : bert_
 --%>
-<%@page import="uts.isd.model.User"%>
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Edit Account</title>
+        <link rel="stylesheet" href="css" >
+        <title>Register</title>
     </head>
     <body>
-        <%
-            User user = (User)session.getAttribute("user");
-        %>
-        <h1>Edit Account</h1>
-        <form value = "submitted" method="post" action="edit.jsp">
+        <h1>Register</h1>
+        <form value = "submitted" method="post" action="welcome.jsp">
             <table>
-                <tr><td>Name:</td><td><input type="text"  name="name" required="true" value="${user.name}"></td></tr>
-                <tr><td>Email:</td><td><input type="text"  name="email" required="true" value="${user.email}"></td></tr>
-                <tr><td>Password:</td><td><input type="password"  name="password" required="true" value="${user.password}"></td></tr>
+                <tr><td>Name:</td><td><input type="text" placeholder="Enter name" name="name" required="true"></td></tr>
+                <tr><td>Email:</td><td><input type="text" placeholder="Enter email" name="email" required></td></tr>
+                <tr><td>Password:</td><td><input type="password" placeholder="Enter password" name="password" required></td></tr>
                 <tr><td>Gender:</td><td><input type="radio" value="male" name="gender" required><label for ="male">Male</label><br><input type="radio" value="female" name="gender"><label for ="male">Female</label></td></tr>
-                <tr><td>Favourite Colour:</td><td><select id ="favcol" name ="favcol" selected="${user.favcol}">
+                <tr><td>Favourite Colour:</td><td><select id ="favcol" name ="favcol">
                             <option value = "black">Black</option>
                             <option value = "brown">Brown</option>
                             <option value = "red">Red</option>
@@ -34,13 +32,9 @@
                             <option value = "gray">Gray</option>
                             <option value = "white">White</option>
                     </td></tr>
-                <tr><td></td><td><input type="hidden" name="submitted" value="yes"><input type="submit" value="Update"></td></tr>
+                <tr><td>Agree to TOS</td><td><input type="checkbox" name ="tos" value ="yes"></td></tr>
+                <tr><td></td><td><input type="hidden" name="submitted" value="yes"><input type="submit" value="Sign Up"></td></tr>
             </table>
         </form>
-                <%
-                    String name = request.getParameter("name");
-                    String email = request.getParameter("email");
-                    String password = request.getParameter("password");
-                %>
     </body>
 </html>
