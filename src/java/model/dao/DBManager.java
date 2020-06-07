@@ -191,7 +191,7 @@ public class DBManager {
     public Shipment findShipment(int shipid, String shipdate) throws SQLException {       
         //setup the select sql query string  
         //execute this query using the statement field 
-        String fetch = "SELECT * FROM ISDUSER.SHIPMENT WHERE SHIPMENTID ="+ shipid +"AND SHIPDATE='"+ shipdate +"'";
+        String fetch = "SELECT * FROM IOTUSER.SHIPMENTS WHERE SHIPMENTID ="+ shipid +"AND SHIPDATE='"+ shipdate +"'";
         //add the results to a ResultSet     
         ResultSet rs = st.executeQuery(fetch);       
         //add the results to a ResultSet       
@@ -215,20 +215,20 @@ public class DBManager {
     
     //Add a user-data into the database   
     public void addShipment(int shipid, String shipname, int shipnum, String shipadd, int shippost, String shipcour, String shipstat, String shipdate, int orderid) throws SQLException {                   //code for add-operation       
-        st.executeUpdate("INSERT INTO ISDUSER.SHIPMENT " + " VALUES ("+ shipid +",'"+ shipname +"',"+ shipnum +",'"+ shipadd +"',"+ shippost +",'"+ shipcour +"','"+ shipstat +"','"+ shipdate +"',"+ orderid +")");   
+        st.executeUpdate("INSERT INTO IOTUSER.SHIPMENTS " + " VALUES ("+ shipid +",'"+ shipname +"',"+ shipnum +",'"+ shipadd +"',"+ shippost +",'"+ shipcour +"','"+ shipstat +"','"+ shipdate +"',"+ orderid +")");   
 
     }
 
 //update a user details in the database   
     public void updateShipment(int shipid, String shipname, int shipnum, String shipadd, int shippost, String shipcour, String shipstat, String shipdate, int orderid) throws SQLException { 
-        st.executeUpdate("UPDATE ISDUSER.SHIPMENT SET SHIPNAME='"+shipname+"',SHIPNUMBER="+shipnum+",SHIPADDRESS='"+shipadd+"',SHIPPOSTCODE="+shippost+",COURIERSERVICE='"+shipcour+"',SHIPSTATUS='"+shipstat+"',SHIPDATE='"+shipdate+"',ORDERID="+orderid+" WHERE SHIPMENTID="+shipid+"");
+        st.executeUpdate("UPDATE IOTDUSER.SHIPMENTS SET SHIPNAME='"+shipname+"',SHIPNUMBER="+shipnum+",SHIPADDRESS='"+shipadd+"',SHIPPOSTCODE="+shippost+",COURIERSERVICE='"+shipcour+"',SHIPSTATUS='"+shipstat+"',SHIPDATE='"+shipdate+"',ORDERID="+orderid+" WHERE SHIPMENTID="+shipid+"");
    //code for update-operation   
 
     }       
 
 //delete a user from the database   
     public void deleteShipment(int shipid) throws SQLException{ 
-        st.executeUpdate("DELETE FROM ISDUSER.SHIPMENT WHERE SHIPMENTID="+shipid+"");
+        st.executeUpdate("DELETE FROM IOTDUSER.SHIPMENTS WHERE SHIPMENTID="+shipid+"");
    //code for delete-operation   
 
     }
