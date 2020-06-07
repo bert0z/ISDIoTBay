@@ -57,6 +57,10 @@
         <servlet-name>ModifyShipmentServlet</servlet-name>
         <servlet-class>controller.ModifyShipmentServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>DeleteShipmentServlet</servlet-name>
+        <servlet-class>controller.DeleteShipmentServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ConnServlet</servlet-name>
         <url-pattern>/ConnServlet</url-pattern>
@@ -112,6 +116,10 @@
     <servlet-mapping>
         <servlet-name>ModifyShipmentServlet</servlet-name>
         <url-pattern>/ModifyShipmentServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DeleteShipmentServlet</servlet-name>
+        <url-pattern>/DeleteShipmentServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
