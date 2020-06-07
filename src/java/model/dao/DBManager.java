@@ -6,6 +6,7 @@
 package model.dao;
 
 import model.Customer;
+import model.Shipment;
 import java.sql.*;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -184,6 +185,52 @@ public class DBManager {
         }
         
         return listLogs;
+    }
+    
+    //Find user by email and password in the database   
+    public Shipment findShipment(int shipid, String shipdate) throws SQLException {       
+        //setup the select sql query string  
+        //execute this query using the statement field 
+        String fetch = "SELECT * FROM ISDUSER.SHIPMENT WHERE SHIPMENTID ="+ shipid +"AND SHIPDATE='"+ shipdate +"'";
+        //add the results to a ResultSet     
+        ResultSet rs = st.executeQuery(fetch);       
+        //add the results to a ResultSet       
+        //search the ResultSet for a user using the parameters   
+        while(rs.next()) {
+            int shipID = Integer.parseInt(rs.getString(1));
+            String shipDate = rs.getString(8);
+            if(shipID == shipid && shipDate.equals(shipdate)){
+                String shipName = rs.getString(2);
+                int shipNum = Integer.parseInt(rs.getString(3));
+                String shipAdd = rs.getString(4);
+                int shipPost = Integer.parseInt(rs.getString(5));
+                String shipCour = rs.getString(6);
+                String shipStat = rs.getString(7);
+                int shipOrderID = Integer.parseInt(rs.getString(9));
+                return new Shipment(shipID,shipName,shipNum,shipAdd,shipPost,shipCour,shipStat,shipDate,shipOrderID);
+            }
+        }            
+        return null;   
+    }
+    
+    //Add a user-data into the database   
+    public void addShipment(int shipid, String shipname, int shipnum, String shipadd, int shippost, String shipcour, String shipstat, String shipdate, int orderid) throws SQLException {                   //code for add-operation       
+        st.executeUpdate("INSERT INTO ISDUSER.SHIPMENT " + " VALUES ("+ shipid +",'"+ shipname +"',"+ shipnum +",'"+ shipadd +"',"+ shippost +",'"+ shipcour +"','"+ shipstat +"','"+ shipdate +"',"+ orderid +")");   
+
+    }
+
+//update a user details in the database   
+    public void updateShipment(String shipid, String shipname, String shipnum, String shipadd, String shippost, String shipcour, String shipstat, String shipdate, String orderid) throws SQLException { 
+        st.executeUpdate("UPDATE ISDUSER.SHIPMENT SET SHIPNAME='"+shipname+"',SHIPNUMBER='"+shipnum+"',SHIPADDRESS='"+shipadd+"',SHIPPOSTCODE='"+shippost+"',COURIERSERVICE='"+shipcour+"',SHIPSTATUS='"+shipstat+"',SHIPDATE='"+shipdate+"',ORDERID='"+orderid+"' WHERE EMAIL='"+shipid+"'");
+   //code for update-operation   
+
+    }       
+
+//delete a user from the database   
+    public void deleteShipment(int shipid) throws SQLException{ 
+        st.executeUpdate("DELETE FROM ISDUSER.SHIPMENT WHERE EMAIL='"+shipid+"'");
+   //code for delete-operation   
+
     }
 }
 
