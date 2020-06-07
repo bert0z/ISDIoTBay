@@ -11,6 +11,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import model.AccessLog;
+import model.Item;
 import model.Staff;
 
 /* 
@@ -184,6 +185,79 @@ public class DBManager {
         }
         
         return listLogs;
+    }
+    //ITEM
+    public Item findItem(String search) throws SQLException
+    {
+       //search and list the devices based on their name and type
+       String fetch = "SELECT * FROM IOTUSER.ITEM WHERE ITEMNAME ='"+search+"'";
+        //add the results to a ResultSet     
+       ResultSet rs = st.executeQuery(fetch); 
+       //when nothing typed in the search 
+       while(rs.next()) {
+            String itemname = rs.getString(2);
+            if(itemname.equals(search))
+            {
+               int itemID = Integer.parseInt(rs.getString(1));
+               String category = rs.getString(3);
+               boolean instock = Boolean.parseBoolean(rs.getString(4));
+               double price = Double.parseDouble(rs.getString(5));
+               int instockquantity=Integer.parseInt(rs.getString(6));
+               int manufactureid = Integer.parseInt(rs.getString(7));
+               
+               return new Item(itemID,itemname,category,instock,price,instockquantity,manufactureid);
+            }
+        }            
+        return null; 
+    }
+    
+    //add a item into the database
+    public void addItem(int itemid, String itemname, String category, boolean instock, 
+            double price, int instockquantity, int manufactureid) throws SQLException
+    {
+        st.executeUpdate("INSERT INTO IOTUSER.ITEM VALUES ("+itemid+",'"+itemname+"','"+category+"',"+instock+
+                ","+price+","+instockquantity+","+manufactureid+")");
+    }
+    
+    //update a item details in the database
+    public void updateItem(int itemid, String itemname, String category, boolean instock, 
+            double price, int instockquantity, int manufactureid) throws SQLException
+    {
+        st.executeUpdate("UPDATE IOTUSER.ITEM SET ITEMID ="+itemid+",ITEMNAME ='"+itemname+"',CATEGORY = '"+category+"',INSTOCK ="+instock+
+                ",PRICE="+price+",INSTOCKQUANTITY="+instockquantity+",MANUFACTURERID="+manufactureid+
+                "WHERE ITEMID = "+itemid);
+    }
+    
+    //delete a item from the database
+    public void deleteItem(int itemid) throws SQLException
+    {
+        st.executeUpdate("DELETE FROM IOTUSER.ITEM WHERE ITEMID ="+ itemid);
+    }
+    
+    //read all Items and store the results into ResultSet rs instance
+    public ArrayList<Item>  listAllItems() throws SQLException
+    {
+        ArrayList<Item> listitem = new ArrayList<>();
+        String sql ="SELECT * FROM IOTUSER.ITEM";
+        ResultSet rs = st.executeQuery(sql);
+        
+        
+        while(rs.next())
+        {//int itemID, String itemname, String category, boolean instock, 
+            //double price, int instockquantity, int manufactureid) throws SQLException
+            int itemID = rs.getInt(1);
+            String itemname = rs.getString(2);
+            String category = rs.getString(3);
+            boolean instock = rs.getBoolean(4);
+            double price = rs.getDouble(5);
+            int instockquantity=rs.getInt(6);
+            int manufactureid = rs.getInt(7);
+            Item item = new Item(itemID,itemname,category,instock,price,instockquantity,manufactureid);
+            listitem.add(item);
+            
+        }
+        
+        return listitem;
     }
 }
 
