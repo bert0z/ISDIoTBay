@@ -26,7 +26,7 @@ public class PaymentDAO {
     }
 
     public List<Payment> searchPayments(String id, String from, String to) throws SQLException {
-        String sql = "select * from payment where ID>0";
+        String sql = "select * from IOTUSER.PAYMENT where ID > 0 ";
         if (!isEmpty(id)) {
             sql = sql + " and ID=" + id;
         }
@@ -45,19 +45,19 @@ public class PaymentDAO {
     }
 
     public void addPayment(String method, String orderId, String amount, String cardName, String cardNumber, String expiryDate, String cvv) throws SQLException {
-        String sql = "insert into PAYMENT(METHOD, AMOUNT, CARDNAME, CARDNUMBER, EXPIRYDATE, CVV, ORDERID) "
+        String sql = "insert into IOTUSER.PAYMENT(METHOD, AMOUNT, CARDNAME, CARDNUMBER, EXPIRYDATE, CVV, ORDERID) "
                 + "values ('"+method+"', "+amount+", '"+cardName+"', '"+cardNumber+"', '"+expiryDate+"', '"+cvv+"', "+orderId+")";
         st.executeUpdate(sql);
     }
     
     public void updatePayment(String pid, String method, String orderId, String amount, String cardName, String cardNumber, String expiryDate, String cvv) throws SQLException {
-        String sql = "update PAYMENT set METHOD='"+method+ "', CARDNAME='" + cardName +"', CARDNUMBER='" +cardNumber+"', EXPIRYDATE='" +expiryDate+"', CVV='" +cvv+"' where ID=" + pid;
+        String sql = "update IOTUSER.PAYMENT set METHOD='"+method+ "', CARDNAME='" + cardName +"', CARDNUMBER='" +cardNumber+"', EXPIRYDATE='" +expiryDate+"', CVV='" +cvv+"' where ID=" + pid;
         System.out.println(sql);
         st.executeUpdate(sql);
     }
     
     public void deletePayment(String pid) throws SQLException {
-        String sql = "delete from payment where ID=" + pid;
+        String sql = "delete from IOTUSER.PAYMENT where ID=" + pid;
         st.executeUpdate(sql);
     }
 
