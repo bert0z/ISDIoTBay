@@ -33,6 +33,17 @@
                 manager.addAccessLog("Logout", timeStamp, email,"customer");
             }
         %>
+         <div class="nav-wrapper">
+            <p class="logo"><a href="index.jsp"><img border="0" alt="Logo" src="images/logo-3.png" width="40"></a></p>
+
+            <div class="nav"> 
+
+                <ul>
+                    <li><a href="login_customer.jsp">Login</a></li>
+                    <li><a href="register_customer.jsp">Register</a></li>
+                </ul>
+            </div> 
+        </div>
         <h1>Logged Out!</h1>
         <p>you have logged out click <a href="index.jsp">here</a> to go to the home page.</p>
         <% session.invalidate(); %>
