@@ -40,7 +40,7 @@
         <h1 class="order-heading">Modify Item Information:<%=(updated != null ? updated: "")%></h1>
             
             <table class = "order-table">
-            <tr><td class="order-item-headings">ItemID</td><td class="order-list"><input name="itemid" value="<%=item.getItemid()%>" required></tr></tr>
+            <tr hidden><td class="order-item-headings">ItemID</td><td class="order-list"><input name="itemid" value="<%=item.getItemid()%>" required></tr></tr>
             <tr><td class="order-item-headings">Item Name</td><td class="order-list"><input type="text"  name="itemname" value="<%=item.getItemname()%>" required></td></tr>
             <tr><td class="order-item-headings" >Category</td><td class="order-list"><input type="text" name="category" value="<%=item.getCategory()%>" required></td></tr>
             <tr><td class="order-item-headings">InStock</td><td class="order-list"><input type="text"  name="instock" value="<%=item.isInstock()%>" required></td></tr>
