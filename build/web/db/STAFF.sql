@@ -36,9 +36,9 @@ VALUES ('syong0195@gmail.com', 'Soyoung Kim', 'syong0827', 0481777283, 'Manager'
 ('zzmsj339@naver.com', 'Davil Jun', 'csnjk9832', 0424390843, 'Casual Staff', 28000),
 ('iemds299@naver.com', 'Jun Kim', 'xaohw8123', 0458903799, 'Part-time Staff', 30500),
 ('lllsk333@naver.com', 'Marcus Shaun', 'dnwjif9734', 0489056735, 'Part-time Staff', 30500),
-('asidf555@daum.com', 'Mike Seong', 'cnsjd9234', 042390754958, 'Part-time Staff', 30500),
-('zksdf888@daum.com', 'Hazel Seo', 'fjwei3244', 04289348955, 'Part-time Staff', 30500),
-('askns333@daum.com', 'Joel Im', 'nweib4923', 04129038443, 'Part-time Staff', 30500),
+('asidf555@daum.com', 'Mike Seong', 'cnsjd9234', 0423907549, 'Part-time Staff', 30500),
+('zksdf888@daum.com', 'Hazel Seo', 'fjwei3244', 0428934895, 'Part-time Staff', 30500),
+('askns333@daum.com', 'Joel Im', 'nweib4923', 0412903843, 'Part-time Staff', 30500),
 ('zmdjq812@daum.com', 'Barry Jeong', 'fjwbe2034', 0488903475, 'Full-time Staff', 31000),
 ('hhieh992@daum.com', 'Seongdong Hao', 'fnjwe9328', 0423904275, 'Full-time Staff', 31000),
 ('jjsiw344@daum.com', 'jess You', 'akwoh9807', 0412390475, 'Full-time Staff', 31000);
