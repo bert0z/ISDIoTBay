@@ -15,7 +15,7 @@ CREATE TABLE ACCESSLOG (
 );
 
 INSERT INTO ACCESSLOG (ACCESSTYPE, TIME, EMAIL, ACCOUNTTYPE)
-VAULES ('Login', '2020-06-03 15:06:23', 'syong195@gmail.com', 'customer'),
+VALUES ('Login', '2020-06-03 15:06:23', 'syong195@gmail.com', 'customer'),
 ('Login', '2020-06-03 15:06:23', 'syong195@gmail.com', 'customer'),
 ('Logout', '2020-06-03 15:34:24', 'hjekf435@gmail.com', 'customer'),
 ('Login', '2020-06-03 15:45:54', 'awjwd143@gmail.com', 'customer'),

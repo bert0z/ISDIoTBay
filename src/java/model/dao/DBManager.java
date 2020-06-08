@@ -364,6 +364,26 @@ public class DBManager {
         
         return orderitem;
     }
+  
+     public OrderLine findCart(int itemid, String itemname) throws SQLException {       
+  
+        String fetch = "SELECT * FROM IOTUSER.ORDERLINE WHERE ITEMID ="+ itemid +"AND ITEMNAME='"+ itemname +"'";
+        //add the results to a ResultSet     
+        ResultSet rs = st.executeQuery(fetch);       
+        //add the results to a ResultSet       
+        //search the ResultSet for a user using the parameters   
+        while(rs.next()) {
+            int itemID = Integer.parseInt(rs.getString(1));
+            String itemName = rs.getString(2);
+            if(itemID == itemid && itemName.equals(itemname)){
+                double itemprice = Double.parseDouble(rs.getString(3));
+                boolean incart = Boolean.parseBoolean(rs.getString(4));
+                return new OrderLine(itemID,itemName,itemprice,incart);
+            }
+        }            
+        return null;   
+    }
+
     
 }
 
