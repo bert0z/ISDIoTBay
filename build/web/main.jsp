@@ -36,6 +36,7 @@
             <a href="delete_customer.jsp">Delete Customer Account</a>
             <a href="accessLogs_customer.jsp">View Access Logs List</a>
             <a href="find_accessLogs_customer.jsp">Find Access Logs</a>
+            <a href="MyPayment">My Payments</a>
             <a href="logout.jsp">Logout </a>
         </div>
         <%    } else { %>
