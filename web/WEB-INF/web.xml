@@ -45,6 +45,22 @@
         <servlet-name>LogoutServlet_Customer</servlet-name>
         <servlet-class>controller.LogoutServlet_Customer</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>AddShipmentServlet</servlet-name>
+        <servlet-class>controller.AddShipmentServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>FindShipmentServlet</servlet-name>
+        <servlet-class>controller.FindShipmentServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ModifyShipmentServlet</servlet-name>
+        <servlet-class>controller.ModifyShipmentServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DeleteShipmentServlet</servlet-name>
+        <servlet-class>controller.DeleteShipmentServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ConnServlet</servlet-name>
         <url-pattern>/ConnServlet</url-pattern>
@@ -88,6 +104,22 @@
     <servlet-mapping>
         <servlet-name>LogoutServlet_Customer</servlet-name>
         <url-pattern>/LogoutServlet_Customer</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AddShipmentServlet</servlet-name>
+        <url-pattern>/AddShipmentServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>FindShipmentServlet</servlet-name>
+        <url-pattern>/FindShipmentServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ModifyShipmentServlet</servlet-name>
+        <url-pattern>/ModifyShipmentServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DeleteShipmentServlet</servlet-name>
+        <url-pattern>/DeleteShipmentServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
