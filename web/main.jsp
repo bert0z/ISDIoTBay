@@ -65,6 +65,7 @@
                     <li><a href="find_accessLogs_customer.jsp">Find Access Logs</a></li>
                     <li><a href="PaymentListServlet">My Payment</a></li>
                     <li><a href="product_list.jsp">Customer Catalogue</a></li>
+                    <li><a href="pastshipments.jsp">My Shipments</a></li>
                     <li> <a href="logout.jsp">Logout </a></li>
                 </ul>    
 
