@@ -30,7 +30,7 @@
                 </ul>
             </div> 
         </div>
-        <h1>Edit Staff Account : <span><%=(updated != null? updated : "")%></span></h1>
+        <h1 align="center">Edit Staff Account : <span><%=(updated != null? updated : "")%></span></h1>
         <form method="post" action="EditServlet_Staff">
             <table>
                 <tr><td>Confirm Your Current Email:</td><td><input type="text"  name="curremail" required="true" value="${staff.email}"></td></tr><tr><td></td></tr><tr></tr>

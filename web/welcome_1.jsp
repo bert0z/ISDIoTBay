@@ -49,19 +49,21 @@
             </div> 
         </div>
         
-        <h1>Welcome, ${staff.name}!</h1>
+        <h1 align="center">Welcome, ${staff.name}!</h1>
+    <center>
         <p>Your Email is ${staff.email} </p>
-        
-        
-        
-        
-        <div>
-            <a href ="index.jsp">Cancel</a>
-            <a href ="main_1.jsp">Main</a>
+
+        <div class="nav-wrapper">
+                <ul>
+                    <li><a href ="index.jsp">Cancel</a></li>
+                    <li><a href ="main_1.jsp">Main</a></li><br>
+                    
+                </ul>    
         </div>
         <%
             session.setAttribute("staff", staff);
         %>
+    </center>
     </body>
 </html>
     

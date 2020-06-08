@@ -26,7 +26,7 @@
                 </ul>
             </div> 
         </div>
-        <h1>Customer Account is Successfully Deleted</h1>
+        <h1 align="center">Customer Account is Successfully Deleted</h1>
         
                     <a href="index.jsp" >Index page</a>  
     </body>

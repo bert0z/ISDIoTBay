@@ -30,7 +30,7 @@
                 </ul>
             </div> 
         </div>
-        <h1>Delete Customer Account : <span><%=(updated != null? updated : "")%></span></h1>
+        <h1 align="center">Delete Customer Account : <span><%=(updated != null? updated : "")%></span></h1>
         <form method="post" action="DeleteServlet_Customer">
             <table>
      

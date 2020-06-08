@@ -38,6 +38,8 @@
                 </ul>
             </div> 
         </div>
+        
+         <h1 align="center">Staff Access Logs : Search Results</h1>
             <table align="center">
                 <tr>
                     <th>Event</th>
