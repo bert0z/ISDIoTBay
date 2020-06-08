@@ -39,11 +39,11 @@
         
         <div class="order-wrapper">
         <h1 class="order-heading">Catalog</h1>
-        <form method="post" action="SearchItemServlet">
+        <form method="post" action="customeritemsearch.jsp">
                 <p class="" align="center">Search the product you want:</p>
                 <br>
                 <p align="center"><input type="text" placeholder="item name or item category" name="search" size="100"></p>
-                <p class="order-buttons"><input class="order-submit" type="submit" value="search"></p>
+                <p class="order-buttons"><input class="order-submit" type="submit" value="submit"></p>
         </form>
         <table align="center">
          <table class = "order-table" border="1" cellpadding="5" cellspacing="1">
