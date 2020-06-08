@@ -38,7 +38,6 @@
         
         <div class="order-wrapper">
         <h1 class="order-heading">Catalog</h1>
-        <h3>Item List</h3>
         <form method="post" action="SearchItemServlet">
             <table align="center">
                 <p>Search the product you want:</p>

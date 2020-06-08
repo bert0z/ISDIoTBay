@@ -14,35 +14,53 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Item_List</title>
+        <title>Staff_Catalogue</title>
+        <link rel="stylesheet" href="css/style.css"/>
+        <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
     </head>
+        
     <body>
         <%
             DBManager manager =(DBManager) session.getAttribute("manager");
             ArrayList<Item> items = manager.listAllItems();
         %>
+        <div class="nav-wrapper">
+            <p class="logo"><a href="index.jsp"><img border="0" alt="Logo" src="images/logo-3.png" width="40"></a></p>
+
+            <div class="nav"> 
+
+                <ul>
+                    <li><a href="main.jsp">Account</a></li>
+                    <li><a href="logout.jsp">Logout</a></li>
+                </ul>
+            </div> 
+        </div>
+        <div class="order-wrapper">
+        <h1 class="order-heading">Catalog</h1>
         <h3>Item List</h3>
-        <table border="1" cellpadding="5" cellspacing="1">
+        <a href="item_create.jsp">Create Item</a>
+        <table class="order-table" border="1" cellpadding="5" cellspacing="1">
             <tr>
-                <th>Item ID</th>
-                <th>Item Name</th>
-                <th>Category</th>
-                <th>InStock</th>
-                <th>Price</th>
-                <th>InStockQuantity</th>
-                <th>Manufacture ID</th>
-                <th>Edit</th>
-                <th>Delete</th>
+                <th class="order-item-headings">Item ID</th>
+                <th class="order-item-headings">Item Name</th>
+                <th class="order-item-headings">Category</th>
+                <th class="order-item-headings">InStock</th>
+                <th class="order-item-headings">Price</th>
+                <th class="order-item-headings">InStockQuantity</th>
+                <th class="order-item-headings">Manufacture ID</th>
+                <th class="order-item-headings">Edit</th>
+                <th class="order-item-headings">Delete</th>
             </tr>
             <% for (Item i : items) {%>
                 <tr>
-                    <td><%=i.getItemid()%></td>
-                    <td><%=i.getItemname()%></td>
-                    <td><%=i.getCategory()%></td>
-                    <td><%=i.isInstock()%></td>
-                    <td><%=i.getPrice()%></td>
-                    <td><%=i.getInstockquantity()%></td>
-                    <td><%=i.getManufactureid()%></td>
+                    <td class="order-list"><%=i.getItemid()%></td>
+                    <td class="order-list"><%=i.getItemname()%></td>
+                    <td class="order-list"><%=i.getCategory()%></td>
+                    <td class="order-list"><%=i.isInstock()%></td>
+                    <td class="order-list"><%=i.getPrice()%></td>
+                    <td class="order-list"><%=i.getInstockquantity()%></td>
+                    <td class="order-list"><%=i.getManufactureid()%></td>
                       
                     <td>
                      <p><a href= "item_update.jsp?itemid=<%=i.getItemid()%>">Edit</a></p>
@@ -53,6 +71,6 @@
                 </tr>
                 <% }%>
         </table>
-        <a href="item_create.jsp">Create Item</a>
-    </body>
+        </div>
+        </body>
 </html>

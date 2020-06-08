@@ -11,39 +11,55 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Create Item</title>
+        <title>Cart</title>
+         <link rel="stylesheet" href="css/style.css"/>
+        <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
     </head>
     <body onload="startTime()">
-        <h1> Create the new Item </h1>
+        <h1 class="order-heading"> Create the new Item </h1>
+        <div class="nav-wrapper">
+            <p class="logo"><a href="index.jsp"><img border="0" alt="Logo" src="images/logo-3.png" width="40"></a></p>
+
+            <div class="nav"> 
+
+                <ul>
+                    <li><a href="main.jsp">Account</a></li>
+                    <li><a href="logout.jsp">Logout</a></li>
+                </ul>
+            </div> 
+        </div>
         <form action="AddItemServlet" method="post">
-        <table>
+        <div class="order-wrapper">
+        <table class = "order-table">
             <tr>
-                <td>ItemID</td>
-                <td><input type="text" placeholder ="Enter Item ID" name="itemid"></td>
+                <td class="order-item-headings">ItemID</td>
+                <td class="order-list" ><input type="text" placeholder ="Enter Item ID" name="itemid"></td>
             </tr>
             <tr>
-                <td>Item Name</td>
-                <td><input type="text" placeholder ="Enter Name" name="itemname"></td>
+                <td class="order-item-headings">Item Name</td>
+                <td class="order-list"><input type="text" placeholder ="Enter Name" name="itemname"></td>
             </tr>
             <tr>
-                <td>Category</td>
-                <td><input type="text" placeholder ="Enter the type of item" name="category" ></td>
+                <td class="order-item-headings">Category</td>
+                <td class="order-list"><input type="text" placeholder ="Enter the type of item" name="category" ></td>
             </tr>
             <tr>
-                <td>InStock</td>
-                <td><input type="text" placeholder ="Enter the status of instock" name="instock"></td>
+                <td class="order-item-headings">InStock</td>
+                <td class="order-list"><input type="text" placeholder ="Enter the status of instock" name="instock"></td>
             </tr>
             
             <tr>
-                <td>Price</td>
-                <td><input type="text" placeholder ="Enter Price" name="price"></td>
+                <td class="order-item-headings">Price</td>
+                <td class="order-list"><input type="text" placeholder ="Enter Price" name="price"></td>
             </tr>
             <tr>
-                <td>InStockQuantity</td>
-                <td><input type="text" placeholder ="Enter the quantity of the item instock" name="instockquantity" ></td>
+                <td class="order-item-headings">InStockQuantity</td>
+                <td class="order-list"><input type="text" placeholder ="Enter the quantity of the item instock" name="instockquantity" ></td>
             </tr>
              <tr>
-                <td>ManufactureID</td>
-                <td><input type="text" placeholder ="Enter the manufactureid" name="manufactureid"></td>
+                <td class="order-item-headings">ManufactureID</td>
+                <td class="order-list"><input type="text" placeholder ="Enter the manufactureid" name="manufactureid"></td>
             </tr>
             <tr>
                 <td colspan="2">
@@ -52,5 +68,6 @@
                 </td>
             </tr>
         </table>
+        </div>
     </body>
 </html>
