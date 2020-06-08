@@ -29,8 +29,6 @@
                     <li><a href="product_list.jsp">Customer Catalogue</li>
                 </ul>    
         </div>
-
-
         <jsp:include page="/ConnServlet" flush="true"/></center>
     </body>
 </html>

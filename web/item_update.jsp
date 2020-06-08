@@ -31,8 +31,8 @@
             <div class="nav"> 
 
                 <ul>
-                    <li><a href="index.jsp">Index</a></li>
-                    <li><a href="login_staff.jsp">Login</a></li>
+                    <li><a href="main_1.jsp">Main</a><li>
+                    <li><a href="logout_1.jsp">Logout</a></li>
                 </ul>
             </div> 
         </div>
@@ -40,22 +40,22 @@
         <h1 class="order-heading">Modify Item Information:<%=(updated != null ? updated: "")%></h1>
             
             <table class = "order-table">
-            <tr><td class="order-item-headings">ItemID</td><td class="order-list"><input name="itemid" value="<%=item.getItemid()%>"></tr></tr>
-            <tr><td class="order-item-headings">Item Name</td><td class="order-list"><input type="text"  name="itemname" value="<%=item.getItemname()%>"></td></tr>
-            <tr><td class="order-item-headings" >Category</td><td class="order-list"><input type="text" name="category" value="<%=item.getCategory()%>" ></td></tr>
-            <tr><td class="order-item-headings">InStock</td><td class="order-list"><input type="text"  name="instock" value="<%=item.isInstock()%>"></td></tr>
-            <tr><td class="order-item-headings">Price</td><td class="order-list"><input type="text" name="price" value="<%=item.getPrice()%>"></td></tr>
-            <tr><td class="order-item-headings">InStockQuantity</td><td class="order-list"><input type="text" name="instockquantity" value="<%=item.getInstockquantity()%>"></td></tr>
-            <tr><td class="order-item-headings">ManufactureID</td><td class="order-list"><input type="text" name="manufactureid" value="<%=item.getManufactureid()%>"></td></tr>
+            <tr hidden><td class="order-item-headings">ItemID</td><td class="order-list"><input name="itemid" value="<%=item.getItemid()%>" required></tr></tr>
+            <tr><td class="order-item-headings">Item Name</td><td class="order-list"><input type="text"  name="itemname" value="<%=item.getItemname()%>" required></td></tr>
+            <tr><td class="order-item-headings" >Category</td><td class="order-list"><input type="text" name="category" value="<%=item.getCategory()%>" required></td></tr>
+            <tr><td class="order-item-headings">InStock</td><td class="order-list"><input type="text"  name="instock" value="<%=item.isInstock()%>" required></td></tr>
+            <tr><td class="order-item-headings">Price</td><td class="order-list"><input type="text" name="price" value="<%=item.getPrice()%>" required></td></tr>
+            <tr><td class="order-item-headings">InStockQuantity</td><td class="order-list"><input type="text" name="instockquantity" value="<%=item.getInstockquantity()%>" required></td></tr>
+            <tr><td class="order-item-headings">ManufactureID</td><td class="order-list"><input type="text" name="manufactureid" value="<%=item.getManufactureid()%>" required></td></tr>
   
             <tr><td></td>
                 <td>
-                    <input class="button" type="submit" value="Update">
-                    <a href="main_1.jsp">Back to main page</a>
+                    <p class="order-buttons"><input  class="order-submit" type="submit" value="Update"></p>
+                    <p class="order-buttons"><a href="item_list.jsp">Back to the catalogue</a></p>
                 </td>
             </table>
         </form>
-            <a href="item_list.jsp">Back to the catalogue</a>
+            
         </div>
     </body>
 </html>

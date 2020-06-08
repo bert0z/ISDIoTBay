@@ -45,7 +45,8 @@
                 </tr>
                 <tr>
                      <div class = "order-buttons">
-                    <td><p class="order-buttons"><input class="button" type="button" onclick="window.location.href = 'all_orders.jsp';" value="Cancel" /><td></p>
+                    <td>
+                        <p class="order-buttons"><input class="button" type="button" onclick="window.location.href = 'all_orders.jsp';" value="Cancel" /><td></p>
                         <p class="order-buttons"><input class="order-submit" type="submit" value="Submit"></td></p>
                      </div>
 

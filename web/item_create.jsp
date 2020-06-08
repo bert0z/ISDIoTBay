@@ -24,7 +24,7 @@
             <div class="nav"> 
 
                 <ul>
-                    <li><a href="main.jsp">Account</a></li>
+                    <li><a href="main_1.jsp">Main</a></li>
                     <li><a href="logout.jsp">Logout</a></li>
                 </ul>
             </div> 
@@ -34,40 +34,43 @@
         <table class = "order-table">
             <tr>
                 <td class="order-item-headings">ItemID</td>
-                <td class="order-list" ><input type="text" placeholder ="Enter Item ID" name="itemid"></td>
+                <td class="order-list" ><input type="text" placeholder ="Enter Item ID" name="itemid" required></td>
             </tr>
             <tr>
                 <td class="order-item-headings">Item Name</td>
-                <td class="order-list"><input type="text" placeholder ="Enter Name" name="itemname"></td>
+                <td class="order-list"><input type="text" placeholder ="Enter Name" name="itemname" required></td>
             </tr>
             <tr>
                 <td class="order-item-headings">Category</td>
-                <td class="order-list"><input type="text" placeholder ="Enter the type of item" name="category" ></td>
+                <td class="order-list"><input type="text" placeholder ="Enter the type of item" name="category" required ></td>
             </tr>
             <tr>
                 <td class="order-item-headings">InStock</td>
-                <td class="order-list"><input type="text" placeholder ="Enter the status of instock" name="instock"></td>
+                <td class="order-list"><input type="text" placeholder ="Enter the status of instock" name="instock" required></td>
             </tr>
             
             <tr>
                 <td class="order-item-headings">Price</td>
-                <td class="order-list"><input type="text" placeholder ="Enter Price" name="price"></td>
+                <td class="order-list"><input type="text" placeholder ="Enter Price" name="price" required></td>
             </tr>
             <tr>
                 <td class="order-item-headings">InStockQuantity</td>
-                <td class="order-list"><input type="text" placeholder ="Enter the quantity of the item instock" name="instockquantity" ></td>
+                <td class="order-list"><input type="text" placeholder ="Enter the quantity of the item instock" name="instockquantity" required ></td>
             </tr>
              <tr>
                 <td class="order-item-headings">ManufactureID</td>
-                <td class="order-list"><input type="text" placeholder ="Enter the manufactureid" name="manufactureid"></td>
+                <td class="order-list"><input type="text" placeholder ="Enter the manufactureid" name="manufactureid" required></td>
             </tr>
             <tr>
                 <td colspan="2">
-                    <input type="submit" value="submit">
-                    <a class="button" href="item_list.jsp"> Cancel </a>
+                    <p class="order-buttons"><input class="order-submit" type="submit" value="submit"></p>
+                    <p class="order-buttons"><a href="item_list.jsp"> Cancel</a></p>
                 </td>
             </tr>
         </table>
+        </form>
         </div>
+         
     </body>
+
 </html>

@@ -82,6 +82,7 @@
                 <ul>
                     <li><a href="register_customer.jsp">Register</a></li>
                     <li><a href="login_customer.jsp">Login</a></li><br>
+                    <li><a href="product_list.jsp">Customer Catalogue</a></li>
                     <li><a href="index.jsp">Index</a></li>
                 </ul>    
         </div>
