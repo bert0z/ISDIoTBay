@@ -8,14 +8,19 @@
 <%@page import="java.util.List"%>
 <%@page import="model.dao.PaymentDAO"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="css/style.css"/>
+        <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
         <title>My Payments</title>
     </head>
     <body>
-        <h1>My Payments</h1>
+    <center><h1>My Payments</h1></center>
+    <center>
         <form>
             <div>
                 Payment ID: <input type="text" name="pid">
@@ -26,7 +31,7 @@
                 <button type="submit">Search</button>
             </div>
         </form>
-
+    </center>
         <table>
             <tr>
                 <th>ID</th>
@@ -58,6 +63,8 @@
             %>
 
         </table>
+            <center>
         <button onclick="window.location.href='addPayment.jsp?orderId=00000001&amount=298.0'">Add Payment</button>
+            </center>
     </body>
 </html>
