@@ -15,6 +15,17 @@
         <title>Staff Register</title>
     </head>
     <body>
+        <div class="nav-wrapper">
+            <p class="logo"><a href="index.jsp"><img border="0" alt="Logo" src="images/logo-3.png" width="40"></a></p>
+
+            <div class="nav"> 
+
+                <ul>
+                    <li><a href="index.jsp">Index</a></li>
+                    <li><a href="login_staff.jsp">Login</a></li>
+                </ul>
+            </div> 
+        </div>
         <h1>Staff Register</h1>
         
         <form method="post" action="RegisterServlet_Staff">
