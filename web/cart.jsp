@@ -77,7 +77,7 @@
             </table>
               <div class = "order-buttons">
                 <p class="login-btn"><a href="product_list.jsp" class="link">Add More Items</a></p>
-                <p><a href="confirmOrder.jsp">Confirm Order</a></p>
+                <p><a href="shipment.jsp">To Shipment</a></p>
               </div>
         </div>
     </body>
