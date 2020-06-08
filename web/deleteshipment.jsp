@@ -18,7 +18,7 @@
     <center>
         <h1>Are you sure you wanted to delete shipment?</h1>
     </center>
-    <br>
+    <hr>
         <p>
         <form method="post" action="DeleteShipmentServlet">
             <table align="center">
