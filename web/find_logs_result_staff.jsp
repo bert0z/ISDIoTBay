@@ -41,7 +41,7 @@
                 </tr>
                 <% }%>
             </table>
-            <a href="main_2.jsp">Main Page</a>
+            <a href="main_1.jsp">Main Page</a>
     </body>
 </html>
 
