@@ -7,6 +7,7 @@
  * Author:  soyoung
  * Created: 13/05/2020
  */
+DROP TABLE CUSTOMER;
 
 CREATE TABLE CUSTOMER (
     EMAIL VARCHAR (40),

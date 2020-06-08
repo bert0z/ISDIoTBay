@@ -60,7 +60,9 @@
         <div class="nav-wrapper">
                 <ul>
                     <li><a href="edit.jsp">Edit Customer Account</a></li>
-                    <li><a href="delete_customer.jsp">Delete Customer Account</a></li><br>
+                    <li><a href="delete_customer.jsp">Delete Customer Account</a></li>
+                    <li><a href="all_orders.jsp">All Orders</a></li>
+                    <li><a href="past_orders_search.jsp">Search Orders</a></li><br>
                     <li><a href="accessLogs_customer.jsp">View Access Logs List</a></li>
                     <li><a href="find_accessLogs_customer.jsp">Find Access Logs</a></li>
                     <li><a href="PaymentListServlet">My Payment</a></li>

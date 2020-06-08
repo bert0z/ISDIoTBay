@@ -7,6 +7,8 @@
  * Author:  Soyoung
  * Created: 14/05/2020
  */
+DROP TABLE ACCESSLOG;
+
 CREATE TABLE ACCESSLOG (
     ACCESSTYPE VARCHAR (12),
     TIME VARCHAR (60),
