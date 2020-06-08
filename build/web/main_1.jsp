@@ -28,8 +28,8 @@
         
            
         <table>
-            <thead><th>Name</th><th>Email</th><th>Password</th><th>Contact Number</th><th>Position</th><th>Salary</th>
-        <tr><td>${staff.name}</td><td>${staff.email}</td><td>${staff.password}</td><td>${staff.contactnum}</td><td>${staff.position}</td><td>${staff.salary}</td></tr>
+            <thead><th>Name</th><th>Email</th><th>Contact Number</th><th>Position</th><th>Salary</th>
+        <tr><td>${staff.name}</td><td>${staff.email}</td><td>${staff.contactnum}</td><td>${staff.position}</td><td>${staff.salary}</td></tr>
         </table>
         <div>
             <a href="edit_1.jsp">Edit Staff Account</a>
