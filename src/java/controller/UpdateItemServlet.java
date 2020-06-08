@@ -38,17 +38,17 @@ public class UpdateItemServlet extends HttpServlet
         double price = Double.parseDouble(request.getParameter("price"));
         int instockquantity = Integer.parseInt(request.getParameter("instockquantity"));
         int manufactureid = Integer.parseInt(request.getParameter("manufactureid"));
-        
+        boolean incart = false;
         
         DBManager manager = (DBManager) session.getAttribute("manager");
         
         try
         {
-            Item i = manager.findItemid(itemid);
-            if(i != null)
+            Item exist = manager.findItemid(itemid);
+            if(exist != null)
             {
-                manager.updateItem(itemid, itemname, category, instock, price, instockquantity, manufactureid);
-                Item item = new Item(itemid, itemname, category, instock, price, instockquantity, manufactureid);
+                manager.updateItem(itemid, itemname, category, instock, price, instockquantity, manufactureid, incart);
+                Item item = new Item(itemid, itemname, category, instock, price, instockquantity, manufactureid, incart);
                 session.setAttribute("item",item);
                 session.setAttribute("updated","Update was successful");
                 request.getRequestDispatcher("item_update.jsp").include(request,response);
@@ -63,10 +63,7 @@ public class UpdateItemServlet extends HttpServlet
         {
             Logger.getLogger(UpdateItemServlet.class.getName()).log(Level.SEVERE,null,ex);
         }
-        
-        response.sendRedirect("item_update.jsp");
-        
-        
+
     }
     
    
