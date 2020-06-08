@@ -33,7 +33,7 @@
                 </ul>
             </div> 
         </div>
-        <h1>Find Access Logs</h1>
+        <h1 align="center">Find Access Logs</h1>
         
         <form method="post" action="find_logs_result_customer.jsp">
             <table align="center">
