@@ -15,12 +15,14 @@
         <title>Past Shipments</title>
     </head>
     <body onload="startTime()">
+    <center>
         <h1>Past Shipments</h1>
+    </center>
         <br>
         <form method="post" action="FindShipmentServlet">
             <table align="center">
-                <tr><td>Shipment ID:</td><td><input type="text" placeholder="" name="shipid" required="true"></td></tr>
-                <tr><td>Date:</td><td><input type="text" placeholder="" name="shipdate" required="true"></td></tr>
+                <tr><td>Shipment ID:</td><td><input type="text" placeholder="Enter 5 Digit Shipment ID" name="shipid" required="true"></td></tr>
+                <tr><td>Date:</td><td><input type="text" placeholder="yyyy-mm-dd" name="shipdate" required="true"></td></tr>
                 <tr><td><input class="button" type="button" onclick="window.location.href = 'main.jsp';" value="Cancel"/><td><input class="button" type="submit" value="Submit"></td></tr>
             </table>
         </form>

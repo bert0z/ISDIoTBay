@@ -21,15 +21,17 @@
         Random rand = new Random();
         int n = rand.nextInt(90000) + 10000;
         %>
+    <center>
         <h1>Please enter your Shipment Details!</h1>
+    </center>
         <hr>
         <form method="post" action="AddShipmentServlet">
             <table align="center">
                 <tr><td></td><td><input type="hidden" placeholder="" name="shipid" value="<%=n%>" required="true"></td></tr>
-                <tr><td>Name:</td><td><input type="text" placeholder="" name="shipname" required></td></tr>
-                <tr><td>Phone Number:</td><td><input type="text" placeholder="" name="shipnum" required></td></tr>
-                <tr><td>Shipping Address:</td><td><input type="text" placeholder="" name="shipadd" required></td></tr>
-                <tr><td>Postcode:</td><td><input type="text" placeholder="" name="shippost" required></td></tr>
+                <tr><td>Name:</td><td><input type="text" placeholder="Enter Shipping Name" name="shipname" required></td></tr>
+                <tr><td>Phone Number:</td><td><input type="text" placeholder="Enter Your Phone Number" name="shipnum" required></td></tr>
+                <tr><td>Shipping Address:</td><td><input type="text" placeholder="Enter Your Address" name="shipadd" required></td></tr>
+                <tr><td>Postcode:</td><td><input type="text" placeholder="Enter your Postcode" name="shippost" required></td></tr>
                 <tr><td>Courier Service:</td><td><select id ="shipcour" name ="shipcour">
                             <option value = "AusPost">AusPost</option>
                             <option value = "FedEx">FedEx</option>

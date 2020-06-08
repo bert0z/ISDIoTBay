@@ -16,10 +16,10 @@
         <title>Check Order</title>
     </head>
     <body>
-        <%
-            Shipment shipment = (Shipment)session.getAttribute("shipment");
-        %>
+    <center>
         <h1>Are the Details correct?</h1>
+    </center>
+        <br>
         <table>
             <thead><th>Shipment ID</th><th>Name</th><th>Phone Number</th><th>Shipping Address</th><th>PostCode</th><th>Courier Service</th><th>Shipment Status</th><th>Shipment Date</th><th>Order ID</th></thead>
         <tr><td>${shipment.shipid}</td><td>${shipment.shipname}</td><td>${shipment.shipnum}</td><td>${shipment.shipadd}</td><td>${shipment.shippost}</td><td>${shipment.shipcour}</td><td>${shipment.shipstat}</td><td>${shipment.shipdate}</td><td>${shipment.orderid}</td></tr>
