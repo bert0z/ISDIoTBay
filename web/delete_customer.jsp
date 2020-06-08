@@ -25,8 +25,8 @@
             <div class="nav"> 
 
                 <ul>
-                    <li><a href="main_1.jsp">Account</a></li>
-                    <li><a href="logout_1.jsp">Logout</a></li>
+                    <li><a href="main.jsp">Account</a></li>
+                    <li><a href="logout.jsp">Logout</a></li>
                 </ul>
             </div> 
         </div>
