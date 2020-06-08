@@ -23,19 +23,14 @@ public class DeleteServlet_Staff extends HttpServlet {
              HttpSession session = request.getSession();
              //2- create an instance of the Validator class  
              Validator validator = new Validator();
-             //3- capture the posted email
-
+             //3- capture the posted email and password
              String staffEmail= request.getParameter("email");
              String staffPassword = request.getParameter("password");
-        
-
-             //4- capture the posted password    
-             //String shipdate = request.getParameter("shipdate");
-             //5- retrieve the manager instance from session
+             //4- retrieve the manager instance from session
              DBManager manager = (DBManager) session.getAttribute ("manager");
              
                      try {          
-                            //6- find user by email and password
+                            //5- find user by email and password
                             Staff staff = manager.findStaff(staffEmail,staffPassword);
                             if(staff != null){
                                 manager.deleteStaff(staffEmail);

@@ -33,7 +33,6 @@ public class EditServlet_Staff extends HttpServlet {
              Staff staff = new Staff (staffName,staffEmail,staffPassword,staffContactNum,staffPosition,staffSalary);
              DBManager manager = (DBManager) session.getAttribute ("manager");
                      try {          
-                            //6- find user by email and password
                             if(staff != null){
                                 session.setAttribute("staff",staff);
                                 manager.updateStaff(staffCurrEmail,staffEmail,staffName,staffPassword,staffContactNum,staffPosition,staffSalary);

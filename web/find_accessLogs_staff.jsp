@@ -6,7 +6,7 @@
 <%@page import="java.util.ArrayList"%>
 <%@page import="model.AccessLog"%>
 <%@page import="model.dao.DBManager"%>
-<%@page import="model.Customer"%>
+<%@page import="model.Staff"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -19,13 +19,13 @@
     </head>
     <body>
         <%
-            Customer customer = (Customer)session.getAttribute("customer");
+            Staff staff = (Staff)session.getAttribute("staff");
             DBManager manager = (DBManager) session.getAttribute("manager");
             
         %>
         <h1>Find Access Logs</h1>
         
-        <form method="post" action="find_logs_result_customer.jsp">
+        <form method="post" action="find_logs_result_staff.jsp">
             <table align="center">
                 <tr><td>Enter Time</td><td><input type="text" placeholder="YYYY-MM-DD" name="timeStamp" required="true"></td></tr>
                 

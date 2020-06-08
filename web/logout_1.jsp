@@ -21,13 +21,11 @@
     <body>
         <%
             Staff staff = (Staff)session.getAttribute("staff");
-            //String tos = request.getParameter("tos");
             DBManager manager = (DBManager)session.getAttribute("manager"); 
             String email = staff.getEmail();
             Date date = new Date();
             SimpleDateFormat formatter=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
             
-           // String time = request.getParameter("time");
             String timeStamp=formatter.format(date);
             
             if (staff != null) {

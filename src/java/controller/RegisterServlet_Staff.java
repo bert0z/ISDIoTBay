@@ -32,13 +32,10 @@ public class RegisterServlet_Staff extends HttpServlet {
              String staffPosition= request.getParameter("position");
              String staffSalary = request.getParameter("salary");
 
-             //4- capture the posted password    
-             //String shipdate = request.getParameter("shipdate");
-             //5- retrieve the manager instance from session
+             
              DBManager manager = (DBManager) session.getAttribute ("manager");
              
                      try {          
-                            //6- find user by email and password
                             Staff exist = manager.findStaff(staffEmail,staffPassword);
                             if(exist != null){
                                 session.setAttribute("existErr", "Staff Already Exists");

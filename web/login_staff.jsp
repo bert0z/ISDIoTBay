@@ -33,7 +33,6 @@
                 
             <%
                 Date date = new Date();
-                //out.print( "<p align = \"center\">" +date.toString()+"</p>");
             %>
         
         

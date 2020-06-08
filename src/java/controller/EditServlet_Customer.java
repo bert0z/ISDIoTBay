@@ -33,9 +33,6 @@ public class EditServlet_Customer extends HttpServlet {
              Customer customer = new Customer (customerEmail,customerName,customerPassword,customerAddress,customerPostcode,customerContactNum);
              DBManager manager = (DBManager) session.getAttribute ("manager");
                      try {          
-                            //6- find user by email and password
-                            
-                           
                             if(customer != null){
                                 session.setAttribute("customer",customer);
                                 manager.updateCustomer(customerCurrEmail, customerEmail, customerName, customerPassword, customerAddress,customerPostcode,customerContactNum);

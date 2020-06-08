@@ -24,7 +24,6 @@
         <hr>
         <%
                 Date date = new Date();
-                //out.print( "<p align = \"center\">" +date.toString()+"</p>");
         %>
         
         
@@ -35,8 +34,8 @@
         <div>
             <a href="edit.jsp">Edit Customer Account</a>
             <a href="delete_customer.jsp">Delete Customer Account</a>
-            <a href="accessLogs_customer.jsp">Access Logs</a>
-            <a href="find_accessLogs_customer.jsp">Access Logs</a>
+            <a href="accessLogs_customer.jsp">View Access Logs List</a>
+            <a href="find_accessLogs_customer.jsp">Find Access Logs</a>
             <a href="logout.jsp">Logout </a>
         </div>
         <%    } else { %>
