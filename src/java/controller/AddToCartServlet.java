@@ -47,11 +47,13 @@ public class AddToCartServlet extends HttpServlet {
                             if(exist != null){
                                 session.setAttribute("existErr", "Item is Already in Cart");
                                 request.getRequestDispatcher("product_list.jsp").include(request,response);
-                            }else{
-                         manager.addToCart(itemid,itemname,itemprice,incart);
-                         OrderLine orderline = new OrderLine(itemid,itemname,itemprice,incart);
-                         session.setAttribute("orderline",orderline);
-                         request.getRequestDispatcher("cart.jsp").include(request,response);
+                            }
+                            else
+                            {
+                                manager.addToCart(itemid,itemname,itemprice,incart);
+                                 OrderLine orderline = new OrderLine(itemid,itemname,itemprice,incart);
+                                session.setAttribute("orderline",orderline);
+                                request.getRequestDispatcher("cart.jsp").include(request,response);
                             }
                      } catch (SQLException ex) {           
                            Logger.getLogger(AddToCartServlet.class.getName()).log(Level.SEVERE, null, ex);       

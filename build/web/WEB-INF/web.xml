@@ -89,6 +89,22 @@
         <servlet-name>UpdatePayment</servlet-name>
         <servlet-class>controller.UpdatePayment</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>UpdateItemServlet</servlet-name>
+        <servlet-class>controller.UpdateItemServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DeleteItemServlet</servlet-name>
+        <servlet-class>controller.DeleteItemServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AddItemServlet</servlet-name>
+        <servlet-class>controller.AddItemServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SearchItemServlet</servlet-name>
+        <servlet-class>controller.SearchItemServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ConnServlet</servlet-name>
         <url-pattern>/ConnServlet</url-pattern>
@@ -177,7 +193,22 @@
         <servlet-name>UpdatePayment</servlet-name>
         <url-pattern>/UpdatePayment</url-pattern>
     </servlet-mapping>
-    
+    <servlet-mapping>
+        <servlet-name>UpdateItemServlet</servlet-name>
+        <url-pattern>/UpdateItemServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DeleteItemServlet</servlet-name>
+        <url-pattern>/DeleteItemServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AddItemServlet</servlet-name>
+        <url-pattern>/AddItemServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SearchItemServlet</servlet-name>
+        <url-pattern>/SearchItemServlet</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
             30

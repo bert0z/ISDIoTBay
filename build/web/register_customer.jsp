@@ -35,8 +35,8 @@
                 <tr><td>Email:</td><td><input type="text" placeholder="email" name="email" required></td></tr>
                 <tr><td>Password:</td><td><input type="text" placeholder="password" name="password" required></td></tr>
                 <tr><td>Address:</td><td><input type="text" placeholder="address" name="address" required></td></tr>
-                <tr><td>Postcode:</td><td><input type="text" placeholder="postcode" name="postcode" required></td></tr>
-                <tr><td>Contact Number:</td><td><input type="text" placeholder="contactnum" name="contactnum" required></td></tr>
+                <tr><td>Postcode:</td><td><input type="text" placeholder="postcode" name="postcode" required></td><td><i>This field should be numeric</i></td></tr>
+                <tr><td>Contact Number:</td><td><input type="text" placeholder="contactnum" name="contactnum" required></td><td><i>This field should be numeric</i></td></tr>
                 
                 <tr><td><input class="button" type="button" onclick="window.location.href = 'index.jsp';" value="Cancel"/><td><input class="button" type="submit" value="Register"></td></tr>
             </table>

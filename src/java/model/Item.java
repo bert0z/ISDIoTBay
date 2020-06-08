@@ -17,17 +17,17 @@ public class Item implements Serializable{
     private String category;
     private boolean instock;
     private double price;
-    private int instockquanity;
+    private int instockquantity;
     private int manufactureid;
     private boolean incart;
 
-    public Item(int itemid, String itemname, String category, boolean instock, double price, int instockquanity, int manufactureid, boolean incart) {
+    public Item(int itemid, String itemname, String category, boolean instock, double price, int instockquantity, int manufactureid, boolean incart) {
         this.itemid = itemid;
         this.itemname = itemname;
         this.category = category;
         this.instock = instock;
         this.price = price;
-        this.instockquanity = instockquanity;
+        this.instockquantity = instockquantity;
         this.manufactureid = manufactureid;
         this.incart = incart;
     }
@@ -72,12 +72,12 @@ public class Item implements Serializable{
         this.price = price;
     }
 
-    public int getInstockquanity() {
-        return instockquanity;
+    public int getInstockquantity() {
+        return instockquantity;
     }
 
     public void setInstockquanity(int instockquanity) {
-        this.instockquanity = instockquanity;
+        this.instockquantity = instockquantity;
     }
 
     public int getManufactureid() {

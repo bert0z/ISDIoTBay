@@ -22,11 +22,8 @@
             DBManager manager = (DBManager) session.getAttribute("manager");
             ArrayList<Item> items = manager.listAllItems();
             
-        %>
-        
-    
+        %> 
     <body>
-        
            <div class="nav-wrapper">
             <p class="logo"><a href="index.jsp"><img border="0" alt="Logo" src="images/logo-3.png" width="40"></a></p>
 
@@ -41,40 +38,51 @@
         
         <div class="order-wrapper">
         <h1 class="order-heading">Catalog</h1>
+        <h3>Item List</h3>
+        <form method="post" action="SearchItemServlet">
+            <table align="center">
+                <p>Search the product you want:</p>
+                <br>
+                <p>Search:<input type="text" placeholder="" name="search" size="24"></p>
+                <input type="submit" value="submit">
+        </form>
          <table class = "order-table">
                <tr>
                     <td class="order-item-headings">Item ID</td>
                     <td class="order-item-headings">Item Name</td>
+                    <td class="order-item-headings">Category</td>
+                    <td class="order-item-headings">InStock</td>
                     <td class="order-item-headings">Price</td>
-                   <td class="order-item-headings">Add to Cart</td>
+                    <td class="order-item-headings">InstockQuantity</td>
+                    <td class="order-item-headings">Manufacture ID</td>
+                    <td class="order-item-headings">Add to Cart</td>
                 </tr>
                  <% 
-                     
-                        for (Item i : items) {
-                
-                 
+                        for (Item i : items) 
+                        {
                  %>
                     <tr>
                         <td class="order-list"><%= i.getItemid()%></td>
                         <td class="order-list"><%= i.getItemname()%></td>
+                        <td class="order-list"><%= i.getCategory()%></td>
+                        <td class="order-list"><%= i.isInstock()%></td>
                         <td class="order-list"><%= i.getPrice()%></td>
+                        <td class="order-list"><%= i.getInstockquantity()%></td>
+                        <td class="order-list"><%= i.getManufactureid()%></td>
+                     
+                        
                         <td class="order-list"><form method ="post" action ="AddToCartServlet">
-                                <input type ="hidden" name ="itemid" value="<%= i.getItemid()%>"/>
-                                <input type ="hidden" name ="itemname" value="<%= i.getItemname()%>"/>
-                                <input type ="hidden" name ="itemprice" value="<%= i.getPrice()%>"/>
-                                <input type ="hidden" name ="incart" value="true"/>
-                                <input type="submit" name="incart" value="Add to Cart"></form></td>
-                 
-  
-                          
-                       
+                        <input type ="hidden" name ="itemid" value="<%= i.getItemid()%>"/>
+                        <input type ="hidden" name ="itemname" value="<%= i.getItemname()%>"/>
+                        <input type ="hidden" name ="itemprice" value="<%= i.getPrice()%>"/>
+                        <input type ="hidden" name ="incart" value="true"/>
+                        <input type="submit" name="incart" value="Add to Cart"></form></td>
                     </tr>
                     <%  
-                    } %>
-   
-                    
+                    } 
+                    %>            
             </table>
-    </div>
+        </div>
         
         </form>
     </body>

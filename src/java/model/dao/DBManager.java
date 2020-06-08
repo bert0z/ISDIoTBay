@@ -278,31 +278,7 @@ public class DBManager {
 
     }
       
-      public ArrayList<Item>  listAllItems() throws SQLException
-    {
-        ArrayList<Item> listitem = new ArrayList<>();
-        String sql ="SELECT * FROM IOTUSER.ITEM";
-        ResultSet rs = st.executeQuery(sql);
-        
-        
-        while(rs.next())
-        {//int itemID, String itemname, String category, boolean instock, 
-            //double price, int instockquantity, int manufactureid) throws SQLException
-            int itemID = rs.getInt(1);
-            String itemname = rs.getString(2);
-            String category = rs.getString(3);
-            boolean instock = rs.getBoolean(4);
-            double price = rs.getDouble(5);
-            int instockquantity=rs.getInt(6);
-            int manufactureid = rs.getInt(7);
-            boolean incart = rs.getBoolean(8);
-            Item item = new Item(itemID,itemname,category,instock,price,instockquantity,manufactureid,incart);
-            listitem.add(item);
-            
-        }
-        
-        return listitem;
-    }
+    
 
        public void removeFromCart(boolean incart) throws SQLException { 
         st.executeUpdate("UPDATE IOTUSER.ITEMS SET INCART='"+false+"'");
@@ -383,7 +359,133 @@ public class DBManager {
         }            
         return null;   
     }
-
+//ITEM
+    public Item findItem(String search) throws SQLException
+    {
+       //search and list the devices based on their name and type
+       String fetch = "SELECT * FROM IOTUSER.ITEM WHERE ITEMNAME ='"+search+"'";
+        //add the results to a ResultSet     
+       ResultSet rs = st.executeQuery(fetch); 
+       //when nothing typed in the search 
+       while(rs.next()) {
+            String itemname = rs.getString(2);
+            if(itemname.equals(search))
+            {
+               int itemID = Integer.parseInt(rs.getString(1));
+               String category = rs.getString(3);
+               boolean instock = Boolean.parseBoolean(rs.getString(4));
+               double price = Double.parseDouble(rs.getString(5));
+               int instockquantity=Integer.parseInt(rs.getString(6));
+               int manufactureid = Integer.parseInt(rs.getString(7));
+               boolean incart = Boolean.parseBoolean(rs.getString(8));
+               return new Item(itemID,itemname,category,instock,price,instockquantity,manufactureid,incart);
+            }
+        }            
+        return null; 
+    }
+    
+    //take in a search with both itemname and Category
+    public ArrayList<Item> SearchItem(String search) throws SQLException
+    {
+        search = search.toLowerCase();
+        String sql;
+        if("".equals(search))
+        {
+            sql="SELECT * FROM IOTUSER.ITEM";
+        }
+        else
+        {
+            sql ="SELECT * FROM IOTUSER.ITEM WHERE lower(itemname) LIKE '%" + search + "%' OR lower(category) LIKE'%"+search+"%'";
+        }
+        ResultSet rs = st.executeQuery(sql);
+        ArrayList<Item> listitem = new ArrayList<>(); 
+        while(rs.next())
+            {
+               int itemID = Integer.parseInt(rs.getString(1));
+               String itemname = rs.getString(2);
+               String category = rs.getString(3);
+               boolean instock = Boolean.parseBoolean(rs.getString(4));
+               double price = Double.parseDouble(rs.getString(5));
+               int instockquantity=Integer.parseInt(rs.getString(6));
+               int manufactureid = Integer.parseInt(rs.getString(7));
+               boolean incart = Boolean.parseBoolean(rs.getString(8));
+               
+               Item item =new Item(itemID,itemname,category,instock,price,instockquantity,manufactureid,incart);
+               
+               listitem.add(item);
+            }           
+        return listitem;
+    }
+    //add a item into the database
+    public void addItem(int itemid, String itemname, String category, boolean instock, 
+            double price, int instockquantity, int manufactureid, boolean incart) throws SQLException
+    {
+        st.executeUpdate("INSERT INTO IOTUSER.ITEM VALUES ("+itemid+",'"+itemname+"','"+category+"',"+instock+
+                ","+price+","+instockquantity+","+manufactureid+","+incart+")");
+                
+        
+    }
+    
+    //update a item details in the database
+    public void updateItem(int itemid,String itemname,String category,boolean instock, double price, int instockquantity,int manufactureid,boolean incart) throws SQLException
+    {
+        st.executeUpdate("UPDATE IOTUSER.ITEM SET ITEMNAME='"+itemname+"', CATEGORY='"+category+"', INSTOCK="+instock+", PRICE="+price +" , INSTOCKQUANTITY= "+instockquantity+" , MANUFACTURERID="+manufactureid+", INCART="+incart +" WHERE ITEMID = "+itemid);
+    }
+    
+    //delete a item from the database
+    public void deleteItem(int itemid) throws SQLException
+    {
+        st.executeUpdate("DELETE FROM IOTUSER.ITEM WHERE ITEMID ="+ itemid);
+    }
+    
+    //read all Items and store the results into ResultSet rs instance
+    public ArrayList<Item>  listAllItems() throws SQLException
+    {
+        ArrayList<Item> listitem = new ArrayList<>();
+        String sql ="SELECT * FROM IOTUSER.ITEM";
+        ResultSet rs = st.executeQuery(sql);
+        
+        
+        while(rs.next())
+        {//int itemID, String itemname, String category, boolean instock, 
+            //double price, int instockquantity, int manufactureid) throws SQLException
+            int itemID = rs.getInt(1);
+            String itemname = rs.getString(2);
+            String category = rs.getString(3);
+            boolean instock = rs.getBoolean(4);
+            double price = rs.getDouble(5);
+            int instockquantity=rs.getInt(6);
+            int manufactureid = rs.getInt(7);
+            boolean incart = rs.getBoolean(8);
+            
+            Item item = new Item(itemID,itemname,category,instock,price,instockquantity,manufactureid,incart);
+            listitem.add(item);
+            
+        }
+        
+        return listitem;
+    }
+    
+    public Item findItemid(int itemid) throws SQLException
+    {
+      ResultSet rs = st.executeQuery( "SELECT * FROM IOTUSER.ITEM WHERE ITEMID ="+ itemid);
+      Item item = null;
+      
+      if(rs.next())
+      {
+          int itemID = Integer.parseInt(rs.getString(1));
+          String itemname = rs.getString(2);
+          String category = rs.getString(3);
+          boolean instock = Boolean.parseBoolean(rs.getString(4));
+          double price = Double.parseDouble(rs.getString(5));
+          int instockquantity=Integer.parseInt(rs.getString(6));
+          int manufactureid = Integer.parseInt(rs.getString(7));
+          boolean incart = Boolean.parseBoolean(rs.getString(8));
+          
+          item = new Item(itemID,itemname,category,instock,price,instockquantity,manufactureid,incart);
+      }
+      return item;
+    }
     
 }
 

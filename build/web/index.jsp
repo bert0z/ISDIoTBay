@@ -22,6 +22,8 @@
         <p><a href="login_customer.jsp">Customer Login</a></p>
         <p><a href="login_staff.jsp">Staff Login</a></p>
         <p><a href="welcome.jsp">Anonymous Customer</a></p>
+        <p><a href="item_list.jsp">Staff_Catalogue</a></p>
+        <p><a href="product_list.jsp">Customer_Catalogue</a></p>
         <jsp:include page="/ConnServlet" flush="true"/></center>
     </body>
 </html>
