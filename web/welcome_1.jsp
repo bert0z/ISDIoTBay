@@ -41,7 +41,7 @@
         
         <h1>Welcome, ${staff.name}!</h1>
         <p>Your Email is ${staff.email} </p>
-        <p>Your Password is ${staff.password} </p>
+        
         
         
         
