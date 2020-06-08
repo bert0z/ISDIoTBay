@@ -9,16 +9,22 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="css/style.css"/>
+        <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
         <title>Are you sure?</title>
     </head>
     <body>
+    <center>
         <h1>Are you sure you wanted to delete shipment?</h1>
+    </center>
+    <br>
         <p>
         <form method="post" action="DeleteShipmentServlet">
             <table align="center">
-                <tr><td>Shipment ID:</td><td><input type="text" value="${shipment.shipid}" name="shipid" required="true"></td></tr>
-                <tr><td>Date:</td><td><input type="date" value="${shipment.shipdate}" name="shipdate" required></td></tr>
-                <tr><td><input class="button" type="button" onclick="window.location.href = 'index.jsp';" value="No"/><td><input class="button" type="submit" value="Yes"></td></tr>
+                <tr><td></td><td><input type="hidden" value="${shipment.shipid}" name="shipid" required="true"></td></tr>
+                <tr><td></td><td><input type="hidden" value="${shipment.shipdate}" name="shipdate" required></td></tr>
+                <tr><td><input class="button" type="button" onclick="window.location.href = 'completeorder.jsp';" value="No"/><td><input class="button" type="submit" value="Yes"></td></tr>
             </table>
 
         </form>

@@ -14,10 +14,14 @@
         <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
         <title>Shipment Deleted</title>
     </head>
-    <h1>Shipment Deleted!</h1>
+    <center>
+        <h1>Shipment Deleted!</h1>
+    </center>
     <br>
+    <center>
         <p>
             You have successfully deleted your shipment information
             Click <a href="shipment.jsp"> here</a> to enter again!
         </p>
+    </center>
 </html>

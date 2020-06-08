@@ -41,7 +41,7 @@
                 <tr><td></td><td><input type="hidden" value="Shipped" name="shipstat" required></td></tr>
                 <tr><td></td><td><input type="hidden" value="<%=LocalDate.now()%>" name="shipdate" ></td></tr>
                 <tr><td></td><td><input type="hidden" value="123" name="orderid" required></td></tr>
-                <tr><td><input class="button" type="button" onclick="window.location.href = 'index.jsp';" value="Cancel"/><td><input class="button" type="submit" value="Submit"></td></tr>
+                <tr><td><input class="button" type="button" onclick="window.location.href = 'cart.jsp';" value="Cancel"/><td><input class="button" type="submit" value="Submit"></td></tr>
             </table>
         </form>
     </body>
