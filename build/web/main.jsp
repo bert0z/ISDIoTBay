@@ -37,6 +37,8 @@
             <a href="accessLogs_customer.jsp">View Access Logs List</a>
             <a href="find_accessLogs_customer.jsp">Find Access Logs</a>
             <a href="PaymentListServlet">My Payment</a>
+            <p><a href="all_orders.jsp">All Orders</a></p>
+          <p><a href="product_list.jsp">Product List</a></p>
             <a href="logout.jsp">Logout </a>
         </div>
         <%    } else { %>
