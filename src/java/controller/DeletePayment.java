@@ -55,7 +55,7 @@ public class DeletePayment extends HttpServlet {
         String pid= request.getParameter("pid");
         try {
             paymentDAO.deletePayment(pid);
-            response.sendRedirect("MyPayment");
+            response.sendRedirect("PaymentListServlet");
         } catch (SQLException ex) {
             Logger.getLogger(DeletePayment.class.getName()).log(Level.SEVERE, null, ex);
         }

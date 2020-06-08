@@ -76,7 +76,7 @@ public class UpdatePayment extends HttpServlet {
         
         try {
             paymentDAO.updatePayment(pid, method, orderId, amount, cardName, cardNumber, expiryDate, cvv);
-            response.sendRedirect("MyPayment");
+            response.sendRedirect("PaymentListServlet");
         } catch (SQLException ex) {
             Logger.getLogger(AddPaymentServlet.class.getName()).log(Level.SEVERE, null, ex);
         }
