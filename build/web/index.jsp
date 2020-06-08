@@ -17,13 +17,18 @@
     <body onload="startTime()">
     <center>
         <h1>Welcome to the Home Page</h1>
-        <p><a href="register_customer.jsp">Customer Register</a></p>
-        <p><a href="register_staff.jsp">Staff Register</a></p>
-        <p><a href="login_customer.jsp">Customer Login</a></p>
-        <p><a href="login_staff.jsp">Staff Login</a></p>
-        <p><a href="welcome.jsp">Anonymous Customer</a></p>
-        <p><a href="item_list.jsp">Staff_Catalogue</a></p>
-        <p><a href="product_list.jsp">Customer_Catalogue</a></p>
+
+        <div class="nav-wrapper">
+                <ul>
+                    <li><a href="register_customer.jsp">Customer Register</a></li><br>
+                    <li><a href="register_staff.jsp">Staff Register</a></li><br>
+                    <li><a href="login_customer.jsp">Customer Login</a></li><br>
+                    <li><a href="login_staff.jsp">Staff Login</a></li><br>
+                    <li><a href="welcome.jsp">Anonymous Customer</a></li> 
+                </ul>    
+        </div>
+
+
         <jsp:include page="/ConnServlet" flush="true"/></center>
     </body>
 </html>

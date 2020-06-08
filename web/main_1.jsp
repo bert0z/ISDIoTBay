@@ -65,6 +65,7 @@
                     <li><a href="delete_staff.jsp">Delete Staff Account</a></li><br>
                     <li><a href="accessLogs_staff.jsp">View Access Logs List</a></li>
                     <li><a href="find_accessLogs_staff.jsp">Find Access Logs</a></li>
+                    <li><a href="item_list.jsp">Staff_Catalogue</a></li>
                     <li><a href="logout_1.jsp">Logout </a></li>
                 </ul>    
 

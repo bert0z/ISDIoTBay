@@ -48,18 +48,28 @@
         </div>
         <%if (customer!=null){
         %>
-       
+       <center>
         <h1>Welcome, ${customer.name}!</h1>
-        <p>Your Email is ${customer.email} </p>
-        
+            <center>
+                <p>Your Email is ${customer.email} </p>
+            </center>
        <% }else { %>
        
-         <h1>Welcome, Anonymous Customer!</h1>
+         <h1 align="center">Welcome, Anonymous Customer!</h1>
          <%}%>
-        <div>
-            <a href ="index.jsp">Cancel</a>
-            <a href ="main.jsp">Main</a>
+         
+         
+        
+        <div class="nav-wrapper">
+                <ul>
+                    <li><a href ="index.jsp">Cancel</a></li>
+                    <li><a href ="main.jsp">Main</a></li><br>
+                    
+                </ul>    
         </div>
+        
+    </center>
+      
         <%
             session.setAttribute("customer", customer);
         %>

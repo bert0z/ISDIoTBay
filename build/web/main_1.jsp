@@ -31,29 +31,56 @@
                 </ul>
             </div> 
         </div>
-        <h1>Staff Dashboard</h1>
+        <h1 align="center">Staff Dashboard</h1>
         
         <%
                 Date date = new Date();
         %>
         
-           
-        <table>
-            <thead><th>Name</th><th>Email</th><th>Password</th><th>Contact Number</th><th>Position</th><th>Salary</th>
-        <tr><td>${staff.name}</td><td>${staff.email}</td><td>${staff.password}</td><td>${staff.contactnum}</td><td>${staff.position}</td><td>${staff.salary}</td></tr>
+
+          <center> 
+             <table>
+            <tr>
+                <td><b>Name:</b></td><td>${staff.name}</td>
+            </tr>
+            <tr>
+                <td><b>Email:</b></td><td>${staff.email}</td>
+            </tr>
+            <tr>
+                <td><b>Contact Number:   </b></td><td>${staff.contactnum}</td>
+            </tr>
+            <tr>
+                <td><b>Position:</b></td><td>${staff.position}</td>
+            </tr>
+            <tr>
+                <td><b>Salary:</b></td><td>${staff.salary}</td>
+            </tr>
         </table>
-        <div>
-            <a href="edit_1.jsp">Edit Staff Account</a>
-            <p><a href="item_list.jsp">Staff_Catalogue</a></p>
-            <a href="delete_staff.jsp">Delete Staff Account</a>
-            <a href="accessLogs_staff.jsp">View Access Logs List</a>
-            <a href="find_accessLogs_staff.jsp">Find Access Logs</a>
-            <a href="logout_1.jsp">Logout </a>
+        
+        <br><br>
+        <center>
+        <div class="nav-wrapper">
+                <ul>
+                    <li><a href="edit_1.jsp">Edit Staff Account</a></li>
+                    <li><a href="delete_staff.jsp">Delete Staff Account</a></li><br>
+                    <li><a href="accessLogs_staff.jsp">View Access Logs List</a></li>
+                    <li><a href="find_accessLogs_staff.jsp">Find Access Logs</a></li>
+                    <li><a href="item_list.jsp">Staff_Catalogue</a></li>
+                    <li><a href="logout_1.jsp">Logout </a></li>
+                </ul>    
+
         </div>
+        
+    </center>
+        
         <%    } else { %>
+        <center>
         <h1>Main</h1>
         <p>you are not logged In!</p>
-        <p><a href="login_staff.jsp">Register</a></p>
+        <div class="nav-wrapper">
+            <ul><li><a href="login_staff.jsp">Register</a></li></ul>
+        </div>
         <%   } %>
+    </center>
     </body>
 </html>

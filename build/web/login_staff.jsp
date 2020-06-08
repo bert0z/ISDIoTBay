@@ -33,7 +33,7 @@
                 </ul>
             </div> 
         </div>
-        <h1>Login<span class="message"><%=(existErr != null? existErr : "")%></h1>
+        <h1 align="center">Login<span class="message"><%=(existErr != null? existErr : "")%></h1>
         <hr>  
         <form method="post" action="LoginServlet_Staff">
             <table align="center">

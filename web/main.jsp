@@ -63,6 +63,8 @@
                     <li><a href="delete_customer.jsp">Delete Customer Account</a></li><br>
                     <li><a href="accessLogs_customer.jsp">View Access Logs List</a></li>
                     <li><a href="find_accessLogs_customer.jsp">Find Access Logs</a></li>
+                    <li><a href="PaymentListServlet">My Payment</a></li>
+                    <li><a href="product_list.jsp">Customer Catalogue</a></li>
                     <li> <a href="logout.jsp">Logout </a></li>
                 </ul>    
 

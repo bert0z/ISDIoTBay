@@ -26,7 +26,7 @@
                 </ul>
             </div> 
         </div>
-        <h1>Customer Register</h1>
+        <h1 align="center">Customer Register</h1>
         
         <form method="post" action="RegisterServlet_Customer">
             <table align="center">
