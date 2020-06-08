@@ -162,16 +162,16 @@
         <url-pattern>/RemoveFromCartServlet</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
+        <servlet-name>PaymentListServlet</servlet-name>
+        <url-pattern>/PaymentListServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
         <servlet-name>AddPaymentServlet</servlet-name>
         <url-pattern>/AddPaymentServlet</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>DeletePayment</servlet-name>
         <url-pattern>/DeletePayment</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>PaymentListServlet</servlet-name>
-        <url-pattern>/PaymentListServlet</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>UpdatePayment</servlet-name>
