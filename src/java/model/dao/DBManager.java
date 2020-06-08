@@ -259,5 +259,25 @@ public class DBManager {
         
         return listitem;
     }
+    
+    public Item findItemid(int itemid) throws SQLException
+    {
+      ResultSet rs = st.executeQuery( "SELECT * FROM IOTUSER.ITEM WHERE ITEMID ="+ itemid);
+      Item item = null;
+      
+      if(rs.next())
+      {
+          int itemID = Integer.parseInt(rs.getString(1));
+          String itemname = rs.getString(2);
+          String category = rs.getString(3);
+          boolean instock = Boolean.parseBoolean(rs.getString(4));
+          double price = Double.parseDouble(rs.getString(5));
+          int instockquantity=Integer.parseInt(rs.getString(6));
+          int manufactureid = Integer.parseInt(rs.getString(7));
+          
+          item = new Item(itemID,itemname,category,instock,price,instockquantity,manufactureid);
+      }
+      return item;
+    }
 }
 
