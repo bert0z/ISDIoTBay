@@ -37,6 +37,7 @@
                 Date date = new Date();
         %>
         
+
           <center> 
              <table>
             <tr>
@@ -66,6 +67,7 @@
                     <li><a href="find_accessLogs_staff.jsp">Find Access Logs</a></li>
                     <li><a href="logout_1.jsp">Logout </a></li>
                 </ul>    
+
         </div>
         
     </center>

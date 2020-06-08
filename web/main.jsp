@@ -39,6 +39,7 @@
         
         
         <table>
+
             <tr>
                 <td><b>Name:</b></td><td>${customer.name}</td>
             </tr>
@@ -64,6 +65,7 @@
                     <li><a href="find_accessLogs_customer.jsp">Find Access Logs</a></li>
                     <li> <a href="logout.jsp">Logout </a></li>
                 </ul>    
+
         </div>
         
     </center>

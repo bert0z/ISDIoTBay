@@ -17,6 +17,7 @@
     <body onload="startTime()">
     <center>
         <h1>Welcome to the Home Page</h1>
+
         <div class="nav-wrapper">
                 <ul>
                     <li><a href="register_customer.jsp">Customer Register</a></li><br>
@@ -26,6 +27,7 @@
                     <li><a href="welcome.jsp">Anonymous Customer</a></li> 
                 </ul>    
         </div>
+
 
         <jsp:include page="/ConnServlet" flush="true"/></center>
     </body>
