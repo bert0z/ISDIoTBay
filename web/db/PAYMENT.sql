@@ -8,6 +8,7 @@
  * Created: 14/05/2020
  */
 drop table PAYMENT;
+
 create table PAYMENT
 (
 	ID INT not null primary key GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1),

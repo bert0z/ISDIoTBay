@@ -7,6 +7,7 @@
  * Author:  bert_
  * Created: 08/06/2020
  */
+DROP TABLE ORDERS;
 
 CREATE TABLE ORDERS (
     ORDERID VARCHAR (12),
