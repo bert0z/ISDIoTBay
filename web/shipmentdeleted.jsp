@@ -9,9 +9,13 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="css/style.css"/>
+        <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
         <title>Shipment Deleted</title>
     </head>
     <h1>Shipment Deleted!</h1>
+    <br>
         <p>
             You have successfully deleted your shipment information
             Click <a href="shipment.jsp"> here</a> to enter again!

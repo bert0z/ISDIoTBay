@@ -11,6 +11,9 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="css/style.css"/>
+        <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
         <title>Shipment</title>
     </head>
     <body onload="startTime()">
@@ -19,6 +22,7 @@
         int n = rand.nextInt(90000) + 10000;
         %>
         <h1>Please enter your Shipment Details!</h1>
+        <hr>
         <form method="post" action="AddShipmentServlet">
             <table align="center">
                 <tr><td></td><td><input type="hidden" placeholder="" name="shipid" value="<%=n%>" required="true"></td></tr>
@@ -33,9 +37,9 @@
                             <option value = "StarTrack">StarTrack</option>
                 </td></tr>
                 <tr><td></td><td><input type="hidden" value="Shipped" name="shipstat" required></td></tr>
-                <tr><td>Date:</td><td><input type="hidden" value="<%=LocalDate.now()%>" name="shipdate" ></td></tr>
+                <tr><td></td><td><input type="hidden" value="<%=LocalDate.now()%>" name="shipdate" ></td></tr>
                 <tr><td></td><td><input type="hidden" value="123" name="orderid" required></td></tr>
-                <tr><td><input class="button" type="button" onclick="window.location.href = 'index.jsp';" value="Cancel"/><td><input class="button" type="submit" value="Sign In"></td></tr>
+                <tr><td><input class="button" type="button" onclick="window.location.href = 'index.jsp';" value="Cancel"/><td><input class="button" type="submit" value="Submit"></td></tr>
             </table>
         </form>
     </body>

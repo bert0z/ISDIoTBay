@@ -10,6 +10,9 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="css/style.css"/>
+        <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
         <title>Check Order</title>
     </head>
     <body>
@@ -21,7 +24,15 @@
             <thead><th>Shipment ID</th><th>Name</th><th>Phone Number</th><th>Shipping Address</th><th>PostCode</th><th>Courier Service</th><th>Shipment Status</th><th>Shipment Date</th><th>Order ID</th></thead>
         <tr><td>${shipment.shipid}</td><td>${shipment.shipname}</td><td>${shipment.shipnum}</td><td>${shipment.shipadd}</td><td>${shipment.shippost}</td><td>${shipment.shipcour}</td><td>${shipment.shipstat}</td><td>${shipment.shipdate}</td><td>${shipment.orderid}</td></tr>
         </table>
-        <a href="modifyshipment.jsp"> Modify</a>
-        <a href="deleteshipment.jsp"> Delete</a>
+        <center>
+        <div class="nav-wrapper">
+                <ul>
+                    <li><a href="modifyshipment.jsp"> Modify</a></li>
+                    <li><a href="deleteshipment.jsp"> Delete</a></li>
+                    <p class="order-buttons"><a href="confirmedorder.jsp">Confirm Order</a></p>
+                </ul>    
+
+        </div>
+        </center>
     </body>
 </html>
