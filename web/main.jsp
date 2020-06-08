@@ -45,6 +45,7 @@
         <div>
             <a href="edit.jsp">Edit Customer Account</a>
             <a href="delete_customer.jsp">Delete Customer Account</a>
+            <a href="product_list.jsp">Customer_Catalogue</a>
             <a href="accessLogs_customer.jsp">View Access Logs List</a>
             <a href="find_accessLogs_customer.jsp">Find Access Logs</a>
             <a href="PaymentListServlet">My Payment</a>

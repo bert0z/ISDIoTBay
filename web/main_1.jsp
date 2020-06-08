@@ -44,6 +44,7 @@
         </table>
         <div>
             <a href="edit_1.jsp">Edit Staff Account</a>
+            <p><a href="item_list.jsp">Staff_Catalogue</a></p>
             <a href="delete_staff.jsp">Delete Staff Account</a>
             <a href="accessLogs_staff.jsp">View Access Logs List</a>
             <a href="find_accessLogs_staff.jsp">Find Access Logs</a>
