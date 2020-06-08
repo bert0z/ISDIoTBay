@@ -40,7 +40,7 @@
        
         <h1>Welcome, ${customer.name}!</h1>
         <p>Your Email is ${customer.email} </p>
-        <p>Your Password is ${customer.password} </p>
+        
        <% }else { %>
        
          <h1>Welcome, Anonymous Customer!</h1>
