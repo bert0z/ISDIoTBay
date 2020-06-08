@@ -30,7 +30,7 @@
             <div class="nav"> 
 
                 <ul>
-                    <li><a href="main.jsp">Account</a></li>
+                    <li><a href="main_1.jsp">Main</a><li>
                     <li><a href="logout.jsp">Logout</a></li>
                 </ul>
             </div> 
@@ -44,9 +44,9 @@
                 <tr lass="order-item-headings"><td>Item Name:</td><td class="order-list"><input name="itemname" required="true" value="<%=item.getItemid()%>"></td><tr>
             </table>
             <p> Are you sure you want to delete this item from the catalogue? </p>
-            <input type="submit" value="Delete"></td></tr>
+            <p class="order-buttons"><input class="order-submit" type="submit" value="Delete"></td></p>
         </form>
-            <a href="item_list.jsp" >Cancel<a> 
-            </div>
+            <p class="order-buttons"><a href="item_list.jsp" >Cancel<a></p>
+        </div>
     </body>
 </html>

@@ -22,7 +22,7 @@
 
                 <ul>
                     <li><a href="register_staff.jsp">Register</a></li>
-                    <li><a href="login_customer.jsp">Login</a></li>
+                    <li><a href="login_staff.jsp">Login</a></li>
                 </ul>
             </div> 
         </div>

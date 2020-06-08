@@ -31,15 +31,13 @@
             <div class="nav"> 
 
                 <ul>
-                    <li><a href="main.jsp">Account</a></li>
-                    <li><a href="logout.jsp">Logout</a></li>
+                    <li><a href="main_1.jsp">Main</a><li>
+                    <li><a href="logout_1.jsp">Logout</a></li>
                 </ul>
             </div> 
         </div>
         <div class="order-wrapper">
-        <h1 class="order-heading">Catalog</h1>
-        <h3>Item List</h3>
-        <a href="item_create.jsp">Create Item</a>
+        <h1 class="order-heading">Staff_Catalogue</h1>
         <table class="order-table" border="1" cellpadding="5" cellspacing="1">
             <tr>
                 <th class="order-item-headings">Item ID</th>
@@ -71,6 +69,8 @@
                 </tr>
                 <% }%>
         </table>
+        <p class="order-buttons"><a href="item_create.jsp">Create Item</a></p>
+        <p class="order-buttons"><a href="main_1.jsp">Back to Main</a></p>
         </div>
         </body>
 </html>

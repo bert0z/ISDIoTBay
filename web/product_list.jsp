@@ -32,6 +32,7 @@
                 <ul>
                     <li><a href="main.jsp">Account</a></li>
                     <li><a href="logout.jsp">Logout</a></li>
+                    <li><a href="cart.jsp">Cart</a></li>
                 </ul>
             </div> 
         </div>
@@ -39,13 +40,13 @@
         <div class="order-wrapper">
         <h1 class="order-heading">Catalog</h1>
         <form method="post" action="SearchItemServlet">
-            <table align="center">
-                <p>Search the product you want:</p>
+                <p class="" align="center">Search the product you want:</p>
                 <br>
-                <p>Search:<input type="text" placeholder="" name="search" size="24"></p>
-                <input type="submit" value="submit">
+                <p align="center"><input type="text" placeholder="item name or item category" name="search" size="100"></p>
+                <p class="order-buttons"><input class="order-submit" type="submit" value="search"></p>
         </form>
-         <table class = "order-table">
+        <table align="center">
+         <table class = "order-table" border="1" cellpadding="5" cellspacing="1">
                <tr>
                     <td class="order-item-headings">Item ID</td>
                     <td class="order-item-headings">Item Name</td>
@@ -82,10 +83,8 @@
                     %>            
             </table>
         </div>
-        
         </form>
     <center>
-        <a href="cart.jsp">Cart</a>
     </center>
     </body>
 </html>

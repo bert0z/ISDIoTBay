@@ -16,28 +16,39 @@
         <%
             Item item = (Item)session.getAttribute("item");
         %>
-        <h1>Searched Item</h1>
-       <table>
-           <table border="1" cellpadding="5" cellspacing="1">
+        <div class="nav-wrapper">
+            <p class="logo"><a href="index.jsp"><img border="0" alt="Logo" src="images/logo-3.png" width="40"></a></p>
+
+            <div class="nav"> 
+
+                <ul>
+                    <li><a href="main.jsp">Main</a></li>
+                    <li><a href="logout.jsp">Logout</a></li>
+                </ul>
+            </div> 
+        </div>
+       <div class="order-wrapper">
+       <h1 h1 class="order-heading">Searched Item</h1>
+       <table class="order-table" border="1" cellpadding="5" cellspacing="1">
             <tr>
-                <th>Item ID</th>
-                <th>Item Name</th>
-                <th>Category</th>
-                <th>InStock</th>
-                <th>Price</th>
-                <th>InStockQuantity</th>
-                <th>Manufacture ID</th>
-                <th>Add to Cart</th>
+                <th class="order-item-headings">Item ID</th>
+                <th class="order-item-headings">Item Name</th>
+                <th class="order-item-headings">Category</th>
+                <th class="order-item-headings">InStock</th>
+                <th class="order-item-headings">Price</th>
+                <th class="order-item-headings">InStockQuantity</th>
+                <th class="order-item-headings">Manufacture ID</th>
+                <th class="order-item-headings">Add to Cart</th>
             </tr>
                 <tr>
-                    <td><%=item.getItemid()%></td>
-                    <td><%=item.getItemname()%></td>
-                    <td><%=item.getCategory()%></td>
-                    <td><%=item.isInstock()%></td>
-                    <td><%=item.getPrice()%></td>
-                    <td><%=item.getInstockquantity()%></td>
-                    <td><%=item.getManufactureid()%></td>
-                    <td>
+                    <td class="order-list"><%=item.getItemid()%></td>
+                    <td class="order-list"><%=item.getItemname()%></td>
+                    <td class="order-list"><%=item.getCategory()%></td>
+                    <td class="order-list"><%=item.isInstock()%></td>
+                    <td class="order-list"><%=item.getPrice()%></td>
+                    <td class="order-list"><%=item.getInstockquantity()%></td>
+                    <td class="order-list"><%=item.getManufactureid()%></td>
+                    <td class="order-list">
                         <form method ="post" action ="AddToCartServlet">
                         <input type ="hidden" name ="itemid" value="<%= item.getItemid()%>"/>
                         <input type ="hidden" name ="itemname" value="<%= item.getItemname()%>"/>
@@ -48,6 +59,7 @@
                 </form>
                 </tr>
         </table>
-        <a href="customer_item_page.jsp">Go back to the catalogue</a>
+                        <p class="orders-buttons"><a href="customer_item_page.jsp">Go back to the catalogue</a></p>
+        </div>
     </body>
 </html>

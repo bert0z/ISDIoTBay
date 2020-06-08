@@ -9,15 +9,30 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Check Item Info</title>
+        <link rel="stylesheet" href="css/style.css"/>
+        <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     </head>
     <body>
-        <h1>The details submitted in the database</h1>
-        <table>
-            <thead><th>ID</th><th>Item name</th><th>Price</th><th>InStock Quantity</th></thead>
-        <tr><td>${item.itemid}</td><td>${item.itemname}</td><td>${item.price}</td><td>${item.instockquantity}</td></tr>
+        <div class="nav-wrapper">
+            <p class="logo"><a href="index.jsp"><img border="0" alt="Logo" src="images/logo-3.png" width="40"></a></p>
+
+            <div class="nav"> 
+
+                <ul>
+                    <li><a href="main_1.jsp">Main</a><li>
+                    <li><a href="logout.jsp">Logout</a></li>
+                </ul>
+            </div> 
+        </div>
+        <div class="order-wrapper">
+        <h1 class="order-heading">The details submitted in the database</h1>
+        <table class = "order-table" border="1" cellpadding="5" cellspacing="1">
+        <thead><th class="order-item-headings">ID</th><th class="order-item-headings" >Item name</th><th class="order-item-headings">Price</th><th class="order-item-headings">In Stock Quantity</th></thead>
+        <tr><td class="order-list">${item.itemid}</td><td class="order-list">${item.itemname}</td><td class="order-list">${item.price}</td><td class="order-list">${item.instockquantity}</td></tr>
         </table>
-        <a href="item_update.jsp"> Modify</a>
-        <a href="item_list.jsp"> Back to Staff Main page</a>
-    </body>
+        <p class="order-buttons"><a href="item_list.jsp"> Back </a></p>
+        </div>
     </body>
 </html>
