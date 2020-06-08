@@ -25,8 +25,6 @@
                     <li><a href="login_customer.jsp">Customer Login</a></li><br>
                     <li><a href="login_staff.jsp">Staff Login</a></li><br>
                     <li><a href="welcome.jsp">Anonymous Customer</a></li> 
-                    <li><a href="item_list.jsp">Staff Catalogue</a></li>
-                    <li><a href="product_list.jsp">Customer Catalogue</li>
                 </ul>    
         </div>
         <jsp:include page="/ConnServlet" flush="true"/></center>
