@@ -18,6 +18,22 @@
         <servlet-class>controller.LoginServlet_Staff</servlet-class>
     </servlet>
     <servlet>
+        <servlet-name>PaymentList</servlet-name>
+        <servlet-class>controller.PaymentListServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AddPaymentServlet</servlet-name>
+        <servlet-class>controller.AddPaymentServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DeletePayment</servlet-name>
+        <servlet-class>controller.DeletePayment</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UpdatePayment</servlet-name>
+        <servlet-class>controller.UpdatePayment</servlet-class>
+    </servlet>
+    <servlet>
         <servlet-name>EditServlet_Customer</servlet-name>
         <servlet-class>controller.EditServlet_Customer</servlet-class>
     </servlet>
@@ -134,6 +150,7 @@
         <url-pattern>/DeleteShipmentServlet</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
+
         <servlet-name>FindOrdersServlet</servlet-name>
         <url-pattern>/FindOrdersServlet</url-pattern>
     </servlet-mapping>
@@ -144,6 +161,22 @@
     <servlet-mapping>
         <servlet-name>RemoveFromCartServlet</servlet-name>
         <url-pattern>/RemoveFromCartServlet</url-pattern>
+
+        <servlet-name>PaymentList</servlet-name>
+        <url-pattern>/MyPayment</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AddPaymentServlet</servlet-name>
+        <url-pattern>/AddPaymentServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DeletePayment</servlet-name>
+        <url-pattern>/DeletePayment</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UpdatePayment</servlet-name>
+        <url-pattern>/UpdatePayment</url-pattern>
+
     </servlet-mapping>
     <session-config>
         <session-timeout>
