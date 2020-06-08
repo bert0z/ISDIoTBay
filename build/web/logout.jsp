@@ -45,7 +45,7 @@
             </div> 
         </div>
         <h1 align="center">Logged Out!</h1>
-        <p>you have logged out click <a href="index.jsp">here</a> to go to the home page.</p>
+        <p>you have logged out click <a href="index.jsp" class="search-btn">here</a> to go to the home page.</p>
         <% session.invalidate(); %>
     </body>
 </html>

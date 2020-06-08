@@ -52,7 +52,7 @@
                 </tr>
                 <% }%>
             </table>
-            <a href="main.jsp">Main Page</a>
+            <a href="main.jsp" class="search-btn">Main Page</a>
     </body>
 </html>
 
