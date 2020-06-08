@@ -21,7 +21,6 @@
         <%
             Customer customer = (Customer)session.getAttribute("customer");
             DBManager manager = (DBManager) session.getAttribute("manager");
-            
         %>
         <h1>Find Access Logs</h1>
         

@@ -28,9 +28,9 @@ public class RegisterServlet_Staff extends HttpServlet {
              String staffName = request.getParameter("name");
              String staffEmail= request.getParameter("email");
              String staffPassword = request.getParameter("password");
-             String staffContactNum = request.getParameter("contactnum");
+             int staffContactNum = Integer.parseInt(request.getParameter("contactnum"));
              String staffPosition= request.getParameter("position");
-             String staffSalary = request.getParameter("salary");
+             Double staffSalary = Double.parseDouble(request.getParameter("salary"));
 
              
              DBManager manager = (DBManager) session.getAttribute ("manager");

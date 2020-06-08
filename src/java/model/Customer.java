@@ -15,11 +15,11 @@ public class Customer implements Serializable{
     private String name;
     private String password;
     private String address;
-    private String postcode;
-    private String contactnum;
+    private int postcode;
+    private int contactnum;
             
     
-    public Customer(String email, String name, String password, String address, String postcode, String contactnum){
+    public Customer(String email, String name, String password, String address, int postcode, int contactnum){
         this.name = name;
         this.email = email;
         this.password = password;
@@ -44,11 +44,11 @@ public class Customer implements Serializable{
         return address;
     }
 
-    public String getPostcode() {
+    public int getPostcode() {
         return postcode;
     }
 
-    public String getContactnum() {
+    public int getContactnum() {
         return contactnum;
     }
     
@@ -70,11 +70,11 @@ public class Customer implements Serializable{
         this.address = address;
     }
 
-    public void setPostcode(String postcode) {
+    public void setPostcode(int postcode) {
         this.postcode = postcode;
     }
 
-    public void setContactnum(String contactnum) {
+    public void setContactnum(int contactnum) {
         this.contactnum = contactnum;
     }
 

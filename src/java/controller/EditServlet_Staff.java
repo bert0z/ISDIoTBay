@@ -26,9 +26,9 @@ public class EditServlet_Staff extends HttpServlet {
              String staffEmail= request.getParameter("email");
              String staffPassword = request.getParameter("password");
              String staffCurrEmail= request.getParameter("curremail");
-             String staffContactNum= request.getParameter("contactnum");
+             int staffContactNum= Integer.parseInt(request.getParameter("contactnum"));
              String staffPosition = request.getParameter("position");
-             String staffSalary= request.getParameter("salary");
+             double staffSalary= Double.parseDouble(request.getParameter("salary"));
              
              Staff staff = new Staff (staffName,staffEmail,staffPassword,staffContactNum,staffPosition,staffSalary);
              DBManager manager = (DBManager) session.getAttribute ("manager");

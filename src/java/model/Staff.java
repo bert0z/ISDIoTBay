@@ -16,11 +16,11 @@ public class Staff implements Serializable{
     private String name;
     private String email;
     private String password;
-    private String contactnum;
+    private int contactnum;
     private String position;
-    private String salary;
+    private double salary;
     
-    public Staff(String name, String email, String password, String contactnum, String position, String salary){
+    public Staff(String name, String email, String password, int contactnum, String position, double salary){
         this.name = name;
         this.email = email;
         this.password = password;
@@ -41,7 +41,7 @@ public class Staff implements Serializable{
         return password;
     }
 
-    public String getContactnum() {
+    public int getContactnum() {
         return contactnum;
     }
 
@@ -49,7 +49,7 @@ public class Staff implements Serializable{
         return position;
     }
 
-    public String getSalary() {
+    public double getSalary() {
         return salary;
     }
 
@@ -66,7 +66,7 @@ public class Staff implements Serializable{
         this.password = password;
     }
 
-    public void setContactnum(String contactnum) {
+    public void setContactnum(int contactnum) {
         this.contactnum = contactnum;
     }
 
@@ -74,7 +74,7 @@ public class Staff implements Serializable{
         this.position = position;
     }
 
-    public void setSalary(String salary) {
+    public void setSalary(double salary) {
         this.salary = salary;
     }
 

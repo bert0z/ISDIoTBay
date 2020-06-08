@@ -28,8 +28,8 @@ public class RegisterServlet_Customer extends HttpServlet {
              String customerEmail= request.getParameter("email");
              String customerPassword = request.getParameter("password");
              String customerAddress = request.getParameter("address");
-             String customerPostcode= request.getParameter("postcode");
-             String customerContactNum = request.getParameter("contactnum");
+             int customerPostcode= Integer.parseInt(request.getParameter("postcode"));
+             int customerContactNum = Integer.parseInt(request.getParameter("contactnum"));
 
             
              //3- retrieve the manager instance from session

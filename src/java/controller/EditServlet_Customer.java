@@ -27,8 +27,8 @@ public class EditServlet_Customer extends HttpServlet {
              String customerPassword = request.getParameter("password");
              String customerCurrEmail= request.getParameter("curremail");
              String customerAddress= request.getParameter("address");
-             String customerPostcode = request.getParameter("postcode");
-             String customerContactNum= request.getParameter("contactnum");
+             int customerPostcode = Integer.parseInt(request.getParameter("postcode"));
+             int customerContactNum= Integer.parseInt(request.getParameter("contactnum"));
              
              Customer customer = new Customer (customerEmail,customerName,customerPassword,customerAddress,customerPostcode,customerContactNum);
              DBManager manager = (DBManager) session.getAttribute ("manager");

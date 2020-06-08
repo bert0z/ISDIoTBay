@@ -29,7 +29,7 @@
             <table align="center">
                 <tr><td>Enter Time</td><td><input type="text" placeholder="YYYY-MM-DD" name="timeStamp" required="true"></td></tr>
                 
-                <tr><td><input class="button" type="button" onclick="window.location.href = 'main.jsp';" value="Cancel"/><td><input class="button" type="submit" value="Find"></td></tr>
+                <tr><td><input class="button" type="button" onclick="window.location.href = 'main_1.jsp';" value="Cancel"/><td><input class="button" type="submit" value="Find"></td></tr>
             </table>
         </form>
     </body>
