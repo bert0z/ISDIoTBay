@@ -84,5 +84,8 @@
         </div>
         
         </form>
+    <center>
+        <a href="cart.jsp">Cart</a>
+    </center>
     </body>
 </html>

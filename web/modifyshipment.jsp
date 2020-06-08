@@ -10,11 +10,16 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="css/style.css"/>
+        <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
         <title>Modify Shipment</title>
     </head>
     <body>
+    <center>
         <h1>Change Shipment details</h1>
-        
+    </center>
+    <hr>
         <form method="post" action="ModifyShipmentServlet">
             <table align="center">
                 <tr><td></td><td><input type="hidden" value="${shipment.shipid}" name="shipid" required="true"></td></tr>
@@ -31,7 +36,7 @@
                 <tr><td></td><td><input type="hidden" value="${shipment.shipstat}" name="shipstat" required></td></tr>
                 <tr><td></td><td><input type="hidden" value="${shipment.shipdate}" name="shipdate" required></td></tr>
                 <tr><td></td><td><input type="hidden" value="${shipment.orderid}" name="orderid" required></td></tr>
-                <tr><td><input class="button" type="button" onclick="window.location.href = 'completeorder.jsp';" value="Cancel"/><td><input class="button" type="submit" value="Sign In"></td></tr>
+                <tr><td><input class="button" type="button" onclick="window.location.href = 'completeorder.jsp';" value="Cancel"/><td><input class="button" type="submit" value="Submit"></td></tr>
             </table>
         
         </form>
