@@ -196,6 +196,13 @@ body a {
     border-radius: 5px;
 }
 
+.order-wrapper {
+    background-color: white;
+    margin: 0 auto;
+    text-align: left;
+    padding: 20px;
+}
+
 table {
     margin: 0 auto;
     text-align: left;
@@ -234,6 +241,50 @@ table {
     text-decoration: none;
 }
 
+.order-buttons a {
+    background-color: #3954d9;
+    color: white;
+    padding: 5px 10px 5px 10px;
+    font-family: 'Open Sans'; 
+    font-size: 20px;
+    border: none;
+    width: 200px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.order-submit {
+    background-color: #3954d9;
+    color: white;
+    padding: 5px 10px 5px 10px;
+    font-family: 'Open Sans'; 
+    font-size: 20px;
+    border: none;
+    width: 200px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.order {
+    background-color: #3954d9;
+    color: white;
+    padding: 5px 10px 5px 10px;
+    font-family: 'Open Sans'; 
+    font-size: 20px;
+    border: none;
+    width: 200px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.order-buttons {
+    text-align: center;
+}
+
 .search {
     max-width: 100%;
     border-radius: 5px;
@@ -254,6 +305,24 @@ table {
     margin: 0 auto;
 
 
+}
+
+#datesearch {
+    height: 30px;
+    padding-left: 10px;
+    border-radius: 5px;
+    border: solid 1px #708090;
+    margin-right: 5px;
+    margin: 0 auto;
+}
+
+#timesearch {
+    height: 30px;
+    padding-left: 10px;
+    border-radius: 5px;
+    border: solid 1px #708090;
+    margin-right: 5px;
+    margin: 0 auto;
 }
 
 .catalog-heading{
@@ -326,6 +395,15 @@ table {
     color: #36328E;
 }
 
+.order-heading {
+    font-family: 'Montserrat';
+    font-weight: bold;
+    font-size: 40px; 
+    color: #36328E;
+    text-align: center;
+}
+
+
 .update-success {
     color: green;
     font-size: 16px;
@@ -340,6 +418,15 @@ table {
     padding: 0;
 }
 
+.order-item-headings {
+    padding: 10px;
+    font-weight: bold;
+    text-align: left;
+}
+.order-list {
+    padding: 10px;
+     text-align: left;
+}
 
 
 @media screen and (max-width: 1550px) {

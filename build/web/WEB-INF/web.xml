@@ -61,6 +61,18 @@
         <servlet-name>DeleteShipmentServlet</servlet-name>
         <servlet-class>controller.DeleteShipmentServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>FindOrdersServlet</servlet-name>
+        <servlet-class>controller.FindOrdersServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AddToCartServlet</servlet-name>
+        <servlet-class>controller.AddToCartServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>RemoveFromCartServlet</servlet-name>
+        <servlet-class>controller.RemoveFromCartServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ConnServlet</servlet-name>
         <url-pattern>/ConnServlet</url-pattern>
@@ -120,6 +132,18 @@
     <servlet-mapping>
         <servlet-name>DeleteShipmentServlet</servlet-name>
         <url-pattern>/DeleteShipmentServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>FindOrdersServlet</servlet-name>
+        <url-pattern>/FindOrdersServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AddToCartServlet</servlet-name>
+        <url-pattern>/AddToCartServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RemoveFromCartServlet</servlet-name>
+        <url-pattern>/RemoveFromCartServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
