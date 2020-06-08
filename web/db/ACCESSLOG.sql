@@ -34,5 +34,5 @@ VALUES ('Login', '2020-06-03 15:06:23', 'syong195@gmail.com', 'customer'),
 ('Logout', '2020-06-08 14:34:39', 'jjsiw344@daum.com', 'staff'),
 ('Login', '2020-06-08 15:25:59', 'zksdf888@daum.com', 'staff'),
 ('Logout', '2020-06-08 21:34:57', 'jjsiw344@daum.com', 'staff'),
-('Login', '2020-06-08 22:15:18', 'jjsiw344@daum.com', 'staff'),
+('Login', '2020-06-08 22:15:18', 'jjsiw344@daum.com', 'staff');
 
