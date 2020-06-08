@@ -40,6 +40,6 @@
                 <tr><td></td><td><input type="submit" value="Delete"></td></tr>
             </table>
         </form>
-                    <a href="main_1.jsp" >Main page</a>  
+                    <a href="main_1.jsp" class="search-btn">Main page</a>  
     </body>
 </html>
