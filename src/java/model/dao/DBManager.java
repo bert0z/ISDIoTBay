@@ -224,14 +224,14 @@ public class DBManager {
 
 //update a user details in the database   
     public void updateShipment(int shipid, String shipname, int shipnum, String shipadd, int shippost, String shipcour, String shipstat, String shipdate, int orderid) throws SQLException { 
-        st.executeUpdate("UPDATE IOTDUSER.SHIPMENTS SET SHIPNAME='"+shipname+"',SHIPNUMBER="+shipnum+",SHIPADDRESS='"+shipadd+"',SHIPPOSTCODE="+shippost+",COURIERSERVICE='"+shipcour+"',SHIPSTATUS='"+shipstat+"',SHIPDATE='"+shipdate+"',ORDERID="+orderid+" WHERE SHIPMENTID="+shipid+"");
+        st.executeUpdate("UPDATE IOTUSER.SHIPMENTS SET SHIPNAME='"+shipname+"',SHIPNUMBER="+shipnum+",SHIPADDRESS='"+shipadd+"',SHIPPOSTCODE="+shippost+",COURIERSERVICE='"+shipcour+"',SHIPSTATUS='"+shipstat+"',SHIPDATE='"+shipdate+"',ORDERID="+orderid+" WHERE SHIPMENTID="+shipid+"");
    //code for update-operation   
 
     }       
 
 //delete a user from the database   
     public void deleteShipment(int shipid) throws SQLException{ 
-        st.executeUpdate("DELETE FROM IOTDUSER.SHIPMENTS WHERE SHIPMENTID="+shipid+"");
+        st.executeUpdate("DELETE FROM IOTUSER.SHIPMENTS WHERE SHIPMENTID="+shipid+"");
    //code for delete-operation   
 
     }
