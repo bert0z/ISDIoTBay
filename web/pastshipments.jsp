@@ -15,10 +15,19 @@
         <title>Past Shipments</title>
     </head>
     <body onload="startTime()">
-    <center>
-        <h1>Past Shipments</h1>
-    </center>
-        <br>
+        <div class="nav-wrapper">
+            <p class="logo"><a href="index.jsp"><img border="0" alt="Logo" src="images/logo-3.png" width="40"></a></p>
+
+            <div class="nav"> 
+
+                <ul>
+                    <li><a href="index.jsp">Index</a></li>
+                    <li><a href="logout.jsp">Logout</a></li>
+                </ul>
+            </div> 
+        </div>
+        <h1 align="center">Past Shipments</h1>
+        <hr>
         <form method="post" action="FindShipmentServlet">
             <table align="center">
                 <tr><td>Shipment ID:</td><td><input type="text" placeholder="Enter 5 Digit Shipment ID" name="shipid" required="true"></td></tr>

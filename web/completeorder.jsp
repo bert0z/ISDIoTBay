@@ -21,8 +21,34 @@
     </center>
         <hr>
         <table>
-            <thead><th>Shipment ID</th><th>Name</th><th>Phone Number</th><th>Shipping Address</th><th>PostCode</th><th>Courier Service</th><th>Shipment Status</th><th>Shipment Date</th><th>Order ID</th></thead>
-        <tr><td>${shipment.shipid}</td><td>${shipment.shipname}</td><td>${shipment.shipnum}</td><td>${shipment.shipadd}</td><td>${shipment.shippost}</td><td>${shipment.shipcour}</td><td>${shipment.shipstat}</td><td>${shipment.shipdate}</td><td>${shipment.orderid}</td></tr>
+
+            <tr>
+                <td><b>Shipment ID:</b></td><td>${shipment.shipid}</td>
+            </tr>
+            <tr>
+                <td><b>Name:</b></td><td>${shipment.shipname}</td>
+            </tr>
+            <tr>
+                <td><b>Phone Number:</b></td><td>${shipment.shipnum}</td>
+            </tr>
+            <tr>
+                <td><b>Shipping Address:</b></td><td>${shipment.shipadd}</td>
+            </tr>
+            <tr>
+                <td><b>Postcode:  </b></td><td>${shipment.shippost}</td>
+            </tr>
+            <tr>
+                <td><b>Courier Service:  </b></td><td>${shipment.shipcour}</td>
+            </tr>
+            <tr>
+                <td><b>Shipment Status:  </b></td><td>${shipment.shipstat}</td>
+            </tr>
+            <tr>
+                <td><b>Shipment Date:  </b></td><td>${shipment.shipdate}</td>
+            </tr>
+            <tr>
+                <td><b>Order ID:  </b></td><td>${shipment.orderid}</td>
+            </tr>
         </table>
         <center>
         <div class="nav-wrapper">
