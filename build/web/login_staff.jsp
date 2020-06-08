@@ -22,6 +22,17 @@
             String emailErr = (String) session.getAttribute("emailErr");
             String passErr = (String) session.getAttribute("passErr");
         %>
+        <div class="nav-wrapper">
+            <p class="logo"><a href="index.jsp"><img border="0" alt="Logo" src="images/logo-3.png" width="40"></a></p>
+
+            <div class="nav"> 
+
+                <ul>
+                    <li><a href="index.jsp">Index</a></li>
+                    <li><a href="register_staff.jsp">Register</a></li>
+                </ul>
+            </div> 
+        </div>
         <h1>Login<span class="message"><%=(existErr != null? existErr : "")%></h1>
         <hr>  
         <form method="post" action="LoginServlet_Staff">

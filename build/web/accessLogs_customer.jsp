@@ -27,6 +27,17 @@
             ArrayList<AccessLog> accesslog = manager.listAccessLogs(customer.getEmail());
         %>
         
+        <div class="nav-wrapper">
+            <p class="logo"><a href="index.jsp"><img border="0" alt="Logo" src="images/logo-3.png" width="40"></a></p>
+
+            <div class="nav"> 
+
+                <ul>
+                    <li><a href="main.jsp">Account</a></li>
+                    <li><a href="logout.jsp">Logout</a></li>
+                </ul>
+            </div> 
+        </div>
             <table align="center">
                 <tr>
                     <th>Event</th>
