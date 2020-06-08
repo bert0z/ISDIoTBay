@@ -28,8 +28,8 @@
         
         
         <table>
-            <thead><th>Name</th><th>Email</th><th>Password</th><th>Address</th><th>Postcode</th><th>Contact Number</th>
-        <tr><td>${customer.name}</td><td>${customer.email}</td><td>${customer.password}</td><td>${customer.address}</td><td>${customer.postcode}</td><td>${customer.contactnum}</td></tr>
+            <thead><th>Name</th><th>Email</th><th>Address</th><th>Postcode</th><th>Contact Number</th>
+        <tr><td>${customer.name}</td><td>${customer.email}</td><td>${customer.address}</td><td>${customer.postcode}</td><td>${customer.contactnum}</td></tr>
         </table>
         <div>
             <a href="edit.jsp">Edit Customer Account</a>
