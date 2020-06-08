@@ -34,9 +34,9 @@
                 <tr><td>Name:</td><td><input type="text" placeholder="name" name="name" required></td></tr>
                 <tr><td>Email:</td><td><input type="text" placeholder="email" name="email" required></td></tr>
                 <tr><td>Password:</td><td><input type="text" placeholder="password" name="password" required></td></tr>
-                <tr><td>Contact Number:</td><td><input type="text" placeholder="contactnum" name="contactnum" required></td></tr>
+                <tr><td>Contact Number:</td><td><input type="text" placeholder="contactnum" name="contactnum" required></td><td><i>This field should be numeric</i></td></tr>
                 <tr><td>Position:</td><td><input type="text" placeholder="position" name="position" required></td></tr>
-                <tr><td>Salary:</td><td><input type="text" placeholder="salary" name="salary" required></td></tr>
+                <tr><td>Salary:</td><td><input type="text" placeholder="salary" name="salary" required></td><td><i>This field should be numeric</i></td></tr>
                 
                 <tr><td><input class="button" type="button" onclick="window.location.href = 'index.jsp';" value="Cancel"/><td><input class="button" type="submit" value="Register"></td></tr>
             </table>
