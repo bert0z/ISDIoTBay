@@ -47,7 +47,7 @@ public class LoginServlet_Staff extends HttpServlet {
                } else if (staff != null) {                     
                       //13-save the logged in user object to the session 
                       session.setAttribute("staff", staff);
-                      //14- redirect user to the main.jsp
+                      //14- redirect user to the welcome_1.jsp
                       request.getRequestDispatcher("welcome_1.jsp").include(request, response);
                } else {                       
                       //15-set user does not exist error to the session 

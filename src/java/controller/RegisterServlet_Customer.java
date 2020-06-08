@@ -23,22 +23,20 @@ public class RegisterServlet_Customer extends HttpServlet {
              HttpSession session = request.getSession();
              //2- create an instance of the Validator class  
              Validator validator = new Validator();
-             //3- capture the posted email
 
              String customerName = request.getParameter("name");
              String customerEmail= request.getParameter("email");
              String customerPassword = request.getParameter("password");
              String customerAddress = request.getParameter("address");
-             String customerPostcode= request.getParameter("postcode");
-             String customerContactNum = request.getParameter("contactnum");
+             int customerPostcode= Integer.parseInt(request.getParameter("postcode"));
+             int customerContactNum = Integer.parseInt(request.getParameter("contactnum"));
 
-             //4- capture the posted password    
-             //String shipdate = request.getParameter("shipdate");
-             //5- retrieve the manager instance from session
+            
+             //3- retrieve the manager instance from session
              DBManager manager = (DBManager) session.getAttribute ("manager");
              
                      try {          
-                            //6- find user by email and password
+                            //4- find user by email and password
                             Customer exist = manager.findCustomer(customerEmail,customerPassword);
                             if(exist != null){
                                 session.setAttribute("existErr", "Customer Already Exists");

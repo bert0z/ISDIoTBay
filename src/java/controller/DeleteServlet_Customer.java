@@ -23,15 +23,10 @@ public class DeleteServlet_Customer extends HttpServlet {
              HttpSession session = request.getSession();
              //2- create an instance of the Validator class  
              Validator validator = new Validator();
-             //3- capture the posted email
-
+             //3- capture the posted email and password
              String customerEmail= request.getParameter("email");
              String customerPassword = request.getParameter("password");
-        
-
-             //4- capture the posted password    
-             //String shipdate = request.getParameter("shipdate");
-             //5- retrieve the manager instance from session
+             //4- retrieve the manager instance from session
              DBManager manager = (DBManager) session.getAttribute ("manager");
              
                      try {          

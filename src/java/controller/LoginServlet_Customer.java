@@ -52,7 +52,7 @@ public class LoginServlet_Customer extends HttpServlet {
                       
                       session.setAttribute("customer", customer);
                       
-                      //14- redirect user to the main.jsp
+                      //14- redirect user to the welcome.jsp
                       request.getRequestDispatcher("welcome.jsp").include(request, response);
                } else {                       
                       //15-set user does not exist error to the session 

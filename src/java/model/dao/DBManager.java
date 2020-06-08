@@ -41,8 +41,8 @@ public class DBManager {
             if(customerEmail.equals(email) && customerPass.equals(password)){
                 String customerName = rs.getString(2);
                 String customerAddress = rs.getString(4);
-                String customerPostcode = rs.getString(5);
-                String customerContactNum = rs.getString(6);
+                int customerPostcode = Integer.parseInt(rs.getString(5));
+                int customerContactNum = Integer.parseInt(rs.getString(6));
                 
                 return new Customer(customerEmail,customerName,customerPass,customerAddress,customerPostcode,customerContactNum);
             }
@@ -63,9 +63,9 @@ public class DBManager {
             String staffPass = rs.getString(3);
             if(staffEmail.equals(email) && staffPass.equals(password)){
                 String staffName = rs.getString(2);
-                String staffContactNum = rs.getString(4);
+                int staffContactNum = Integer.parseInt(rs.getString(4));
                 String staffPosition = rs.getString(5);
-                String staffSalary = rs.getString(6);
+                double staffSalary = Double.parseDouble(rs.getString(6));
                 
                 return new Staff(staffName,staffEmail,staffPass,staffContactNum,staffPosition,staffSalary);
             }
@@ -97,13 +97,13 @@ public class DBManager {
     
 
 //Add a user-data into the database   
-    public void addCustomer(String email, String name, String password, String address, String postcode, String contactnum) throws SQLException {                   //code for add-operation       
-        st.executeUpdate("INSERT INTO IOTUSER.CUSTOMER " + "VALUES ('"+ email +"','"+ name +"','"+ password +"','"+address+"','"+postcode+"','"+contactnum+"')");   
+    public void addCustomer(String email, String name, String password, String address, int postcode, int contactnum) throws SQLException {                   //code for add-operation       
+        st.executeUpdate("INSERT INTO IOTUSER.CUSTOMER " + "VALUES ('"+ email +"','"+ name +"','"+ password +"','"+address+"',"+postcode+","+contactnum+")");   
 
     }
     
-    public void addStaff(String email, String name, String password, String contactnum, String position, String salary) throws SQLException {                   //code for add-operation       
-        st.executeUpdate("INSERT INTO IOTUSER.STAFF " + "VALUES ('"+ email +"','"+ name +"','"+ password +"','"+contactnum+"','"+position+"','"+salary+"')");   
+    public void addStaff(String email, String name, String password, int contactnum, String position, double salary) throws SQLException {                   //code for add-operation       
+        st.executeUpdate("INSERT INTO IOTUSER.STAFF " + "VALUES ('"+ email +"','"+ name +"','"+ password +"',"+contactnum+",'"+position+"',"+salary+")");   
 
     }
     
@@ -113,14 +113,14 @@ public class DBManager {
     }
 
 //update a user details in the database   
-    public void updateCustomer(String curremail, String email, String name, String password, String address, String postcode, String contactnum) throws SQLException { 
-        st.executeUpdate("UPDATE IOTUSER.CUSTOMER SET EMAIL='"+email+"',NAME='"+name+"',PASSWORD='"+password+"',ADDRESS='"+address+"',POSTCODE='"+postcode+"',CONTACTNUM='"+contactnum+"' WHERE EMAIL='"+curremail+"'");
+    public void updateCustomer(String curremail, String email, String name, String password, String address, int postcode, int contactnum) throws SQLException { 
+        st.executeUpdate("UPDATE IOTUSER.CUSTOMER SET EMAIL='"+email+"',NAME='"+name+"',PASSWORD='"+password+"',ADDRESS='"+address+"',POSTCODE="+postcode+",CONTACTNUM="+contactnum+" WHERE EMAIL='"+curremail+"'");
    //code for update-operation   
 
     }   
     
-    public void updateStaff(String curremail, String email, String name, String password, String contactnum, String position, String salary) throws SQLException { 
-        st.executeUpdate("UPDATE IOTUSER.STAFF SET EMAIL='"+email+"',NAME='"+name+"',PASSWORD='"+password+"',CONTACTNUM='"+contactnum+"',POSITION='"+position+"',SALARY='"+salary+"' WHERE EMAIL='"+curremail+"'");
+    public void updateStaff(String curremail, String email, String name, String password, int contactnum, String position, double salary) throws SQLException { 
+        st.executeUpdate("UPDATE IOTUSER.STAFF SET EMAIL='"+email+"',NAME='"+name+"',PASSWORD='"+password+"',CONTACTNUM="+contactnum+",POSITION='"+position+"',SALARY="+salary+" WHERE EMAIL='"+curremail+"'");
    //code for update-operation   
 
     }       

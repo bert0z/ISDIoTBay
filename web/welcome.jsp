@@ -20,14 +20,12 @@
     </head>
         <%
             Customer customer = (Customer)session.getAttribute("customer");
-            //String tos = request.getParameter("tos");
             DBManager manager = (DBManager)session.getAttribute("manager"); 
             String email = request.getParameter("email");
             String password = request.getParameter("password");
             Date date = new Date();
             SimpleDateFormat formatter=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
             
-           // String time = request.getParameter("time");
             String timeStamp=formatter.format(date);
             
             if (customer != null) {

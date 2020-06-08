@@ -20,10 +20,9 @@ public class LogoutServlet_Customer extends HttpServlet{
     @Override   
      protected void doPost(HttpServletRequest request, HttpServletResponse response)   throws ServletException, IOException {       
      
-         HttpSession session = request.getSession();
-          DBManager manager = (DBManager)session.getAttribute("manager"); 
-          Customer customer = (Customer)session.getAttribute("customer");
-            //String tos = request.getParameter("tos");
+            HttpSession session = request.getSession();
+            DBManager manager = (DBManager)session.getAttribute("manager"); 
+            Customer customer = (Customer)session.getAttribute("customer");
             String email = customer.getEmail();
             String time = request.getParameter("time");
         try {

@@ -18,7 +18,6 @@
         <%
             Staff staff = (Staff)session.getAttribute("staff");
             String updated = (String)session.getAttribute("updated");
-            //<tr><td>Current Email:</td><td><input type="text"  name="curr_email" required="true" value="${customer.email}"></td></tr>
         %>
         <h1>Edit Staff Account : <span><%=(updated != null? updated : "")%></span></h1>
         <form method="post" action="EditServlet_Staff">
