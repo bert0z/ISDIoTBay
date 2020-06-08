@@ -22,7 +22,7 @@
         <h1>Edit Customer Account : <span><%=(updated != null? updated : "")%></span></h1>
         <form method="post" action="EditServlet_Customer">
             <table>
-                <tr><td>Confirm YourCurrent Email:</td><td><input type="text"  name="curremail" required="true" value="${customer.email}"></td></tr><tr><td></td></tr><tr></tr>
+                <tr><td>Current Email:</td><td><input type="text"  name="curremail" required="true" value="${customer.email}"></td></tr><tr><td></td></tr>
                 <tr><td>Name:</td><td><input type="text"  name="name" required="true" value="${customer.name}"></td></tr>
                 <tr><td>Email:</td><td><input type="text"  name="email" required="true" value="${customer.email}"></td></tr>
                 <tr><td>Password:</td><td><input type="password"  name="password" required="true" value="${customer.password}"></td></tr>
