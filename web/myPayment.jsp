@@ -6,12 +6,13 @@
 
 <%@page import="model.Payment"%>
 <%@page import="java.util.List"%>
+<%@page import="model.dao.PaymentDAO"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>My Payments</title>
     </head>
     <body>
         <h1>My Payments</h1>
