@@ -240,7 +240,7 @@ public class DBManager {
     public Order findOrder(String orderid, String orderdate) throws SQLException {       
         //setup the select sql query string  
         //execute this query using the statement field 
-        String fetch = "SELECT * FROM IOTBAY.ORDERS WHERE ORDERID ='"+ orderid +"'AND ORDERDATE='"+ orderdate +"'";
+        String fetch = "SELECT * FROM IOTUSER.ORDERS WHERE ORDERID ='"+ orderid +"'AND ORDERDATE='"+ orderdate +"'";
         //add the results to a ResultSet     
         ResultSet rs = st.executeQuery(fetch);       
         //add the results to a ResultSet       
@@ -261,19 +261,19 @@ public class DBManager {
     
        //Add a order-data into the database   
     public void addOrder(String orderid, String orderdate, String ordertime, String orderstatus) throws SQLException {                   //code for add-operation       
-        st.executeUpdate("INSERT INTO IOTBAY.ORDERS " + " VALUES ('"+ orderid +"','"+ orderdate +"','"+ ordertime +"','"+ orderstatus +"','"+"')");   
+        st.executeUpdate("INSERT INTO IOTUSER.ORDERS " + " VALUES ('"+ orderid +"','"+ orderdate +"','"+ ordertime +"','"+ orderstatus +"','"+"')");   
 
     }
     
     //update a order details in the database   
     public void updateOrder(String orderid, String orderdate, String ordertime, String orderstatus) throws SQLException { 
-        st.executeUpdate("UPDATE IOTBAY.ORDERS SET ORDERID='"+orderid+"',ORDERDATE='"+orderdate+"',ORDERTIME='"+ordertime+"',ORDERSTATUS='"+orderstatus+"'");
+        st.executeUpdate("UPDATE IOTUSER.ORDERS SET ORDERID='"+orderid+"',ORDERDATE='"+orderdate+"',ORDERTIME='"+ordertime+"',ORDERSTATUS='"+orderstatus+"'");
    //code for update-operation   
 
     }   
     
       public void deleteOrder(String orderid) throws SQLException{ 
-        st.executeUpdate("DELETE FROM IOTBAY.ORDERS WHERE ORDERID='"+orderid+"'");
+        st.executeUpdate("DELETE FROM IOTUSER.ORDERS WHERE ORDERID='"+orderid+"'");
    //code for delete  
 
     }
@@ -281,7 +281,7 @@ public class DBManager {
       public ArrayList<Item>  listAllItems() throws SQLException
     {
         ArrayList<Item> listitem = new ArrayList<>();
-        String sql ="SELECT * FROM IOTBAY.ITEM";
+        String sql ="SELECT * FROM IOTUSER.ITEM";
         ResultSet rs = st.executeQuery(sql);
         
         
@@ -305,7 +305,7 @@ public class DBManager {
     }
 
        public void removeFromCart(boolean incart) throws SQLException { 
-        st.executeUpdate("UPDATE IOTBAY.ITEMS SET INCART='"+false+"'");
+        st.executeUpdate("UPDATE IOTUSER.ITEMS SET INCART='"+false+"'");
 
        }
        
@@ -313,7 +313,7 @@ public class DBManager {
           public ArrayList<OrderLine>  listOrderLineItems() throws SQLException
     {
         ArrayList<OrderLine> orderitem = new ArrayList<>();
-        String sql ="SELECT * FROM IOTBAY.ORDERLINE";
+        String sql ="SELECT * FROM IOTUSER.ORDERLINE";
         ResultSet rs = st.executeQuery(sql);
         
         
@@ -333,13 +333,13 @@ public class DBManager {
           
             //Add a order-data into the database   
     public void addToCart(int itemID, String itemname, double itemprice, boolean incart) throws SQLException {                   //code for add-operation       
-        st.executeUpdate("INSERT INTO IOTBAY.ORDERLINE VALUES ("+ itemID +",'"+ itemname +"',"+ itemprice +","+ incart +")");   
+        st.executeUpdate("INSERT INTO IOTUSER.ORDERLINE VALUES ("+ itemID +",'"+ itemname +"',"+ itemprice +","+ incart +")");   
 
 
 }
     
    public void removeFromCart(int itemID) throws SQLException {                   //code for add-operation       
-        st.executeUpdate("DELETE FROM IOTBAY.ORDERLINE WHERE ITEMID="+itemID+"");
+        st.executeUpdate("DELETE FROM IOTUSER.ORDERLINE WHERE ITEMID="+itemID+"");
 
 
 }
@@ -347,7 +347,7 @@ public class DBManager {
   public ArrayList<Order>  listOrderAllOrders() throws SQLException
     {
         ArrayList<Order> orderitem = new ArrayList<>();
-        String sql ="SELECT * FROM IOTBAY.ORDERS";
+        String sql ="SELECT * FROM IOTUSER.ORDERS";
         ResultSet rs = st.executeQuery(sql);
         
         
