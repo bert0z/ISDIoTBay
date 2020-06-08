@@ -44,6 +44,6 @@
                 <tr><td></td><td><input type="submit" value="Update"></td></tr>
             </table>
         </form>
-                    <a href="main.jsp" >Main page</a>  
+                    <a href="main.jsp" class="search-btn">Main page</a>  
     </body>
 </html>

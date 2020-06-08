@@ -28,6 +28,6 @@
         </div>
         <h1 align="center">Customer Account is Successfully Deleted</h1>
         
-                    <a href="index.jsp" >Index page</a>  
+                    <a href="index.jsp" class="search-btn">Index page</a>  
     </body>
 </html>
